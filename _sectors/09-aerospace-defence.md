@@ -7,7 +7,7 @@ slug: aerospace-defence
 name: "Aerospace & Defence"
 covers: "Aircraft delivery rates, defence budgets and engine supply chains."
 rota_group: C          # A, B or C — which week of the 3-week cycle this desk publishes
-image: ""      # optional cover image, e.g. /assets/img/sectors/09.jpg
+image: "/assets/img/sectors/09.jpg"
 
 analysts:
   - name: "Katja Kosinova"
