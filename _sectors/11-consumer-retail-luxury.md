@@ -7,7 +7,7 @@ slug: consumer-retail-luxury
 name: "Consumer, Retail & Luxury"
 covers: "Pricing power, inventory turns, and aspirational versus staple demand."
 rota_group: B          # A, B or C — which week of the 3-week cycle this desk publishes
-image: ""      # optional cover image, e.g. /assets/img/sectors/11.jpg
+image: "/assets/img/sectors/11.jpg"
 
 analysts:
   - name: "Natalia Hanks"
