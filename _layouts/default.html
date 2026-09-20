@@ -1,6 +1,22 @@
 <!doctype html>
 <html lang="en">
+{% include head.html %}
+<body class="{{ page.body_class }}">
+{% include header.html %}
+<main id="main">
+{% if page.layout == "default" and page.title and page.show_hero != false %}
+<section class="page-hero">
+  <div class="wrap">
+    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+    <h1 data-enter="1">{{ page.title }}</h1>
+    {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
+  </div>
+</section>
+{% endif %}
+{{ content }}
+</main>
 {% include footer.html %}
+
 <div class="subscribe-popup" id="subscribePopup">
   <button type="button" class="subscribe-popup__close" id="subscribeClose" aria-label="Close">✕</button>
   <div id="subscribeFormWrap">
@@ -38,21 +54,7 @@
   });
 })();
 </script>
-<body class="{{ page.body_class }}">
-{% include header.html %}
-<main id="main">
-{% if page.layout == "default" and page.title and page.show_hero != false %}
-<section class="page-hero">
-  <div class="wrap">
-    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
-    <h1 data-enter="1">{{ page.title }}</h1>
-    {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
-  </div>
-</section>
-{% endif %}
-{{ content }}
-</main>
-{% include footer.html %}
+
 <script>
   window.M62 = {
     schedule: {{ site.data.schedule | jsonify }},
