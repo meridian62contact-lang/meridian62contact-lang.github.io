@@ -42,9 +42,23 @@ permalink: /join/
         <h2>A byline and a record.</h2>
         <p>A named byline — name, degree, university — on a public site anyone can link to. A term of notes on companies you genuinely follow, which is what interviewers are really asking about. A CV line that means something: <em>Semiconductors Analyst, Meridian62</em>.</p>
         {% if site.contact_email != "" %}
-        <p style="margin-top:2rem"><a class="btn" href="mailto:{{ site.contact_email }}?subject=Writing%20for%20Meridian62">Get in touch</a></p>
-        <p class="small">Email {{ site.contact_email }} with your degree, university and the two or three sectors you would be most at home in.</p>
-        {% endif %}
+<p style="margin-top:2rem"><button type="button" class="btn" onclick="document.getElementById('joinForm').classList.toggle('hidden')">Get in touch</button></p>
+<form id="joinForm" class="form hidden" style="max-width:420px;margin-top:1.3rem" action="https://formsubmit.co/meridian62.contact@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="Writing for Meridian62">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://www.meridian62.com/thanks/">
+  <input type="text" name="_honey" style="display:none">
+  <label>Name</label>
+  <input type="text" name="Name" required>
+  <label>Degree &amp; university</label>
+  <input type="text" name="Degree and university" placeholder="e.g. MEng Chemical Engineering, Imperial College London" required>
+  <label>Sectors you would be most at home in <small>Two or three, in order of preference</small></label>
+  <input type="text" name="Sectors">
+  <label>Anything else <small>Optional</small></label>
+  <textarea name="Message"></textarea>
+  <button class="btn" type="submit" style="margin-top:1.3rem">Send</button>
+</form>
+{% endif %}
       </div>
     </div>
   </div>
