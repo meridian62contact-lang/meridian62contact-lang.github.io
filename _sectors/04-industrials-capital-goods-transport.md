@@ -13,9 +13,9 @@ analysts:
   - name: "Sophia Zampolli"
     degree: "MEng Chemical Engineering"
     university: "Imperial College London"
-  - name: "Luca"
-    degree: ""
-    university: ""
+  - name: "Luca Serpietri"
+    degree: "BSc Mathematics with Management and Finance"
+    university: "King's College London"
 
 # 3–5 companies the desk follows all term. 'watching' is the one-sentence coverage line:
 # the specific thing the desk is watching right now (update it whenever it changes).
