@@ -124,7 +124,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 
 /* ---------- hero ---------- */
 .hero{
-   height:100svh;display:grid;place-items:center;text-align:center;position:relative;padding:96px 0 72px;
+     height:100svh;display:grid;place-items:center;text-align:center;position:relative;padding:96px 0 72px;
   background:
     radial-gradient(ellipse 60% 50% at 50% 42%, rgba(16,32,58,.9), transparent 70%),
     radial-gradient(ellipse 120% 80% at 50% 110%, rgba(201,164,92,.10), transparent 60%),
@@ -133,7 +133,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 }
 .hero__lines{position:absolute;inset:0;pointer-events:none;opacity:.35}
 .hero__lines svg{width:100%;height:100%}
-.hero__inner{position:relative;z-index:1}
+.hero__inner{position:relative;z-index:1;grid-row:2}
 .hero .mark--hero{width:clamp(120px,15vh,190px);height:auto;color:var(--ink);margin:0 auto 1.6rem;display:block}
 .hero__tag{font-family:var(--sans);font-size:.72rem;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem}
 .hero__title{font-family:var(--display);font-size:clamp(2.8rem,min(9vw,13vh),6.8rem);letter-spacing:.24em;text-transform:uppercase;line-height:1;margin:0 0 .6rem;padding-left:.24em}
@@ -142,7 +142,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .hero__line{font-family:var(--display);font-size:clamp(1.5rem,3.2vw,2.6rem);line-height:1.25;margin:0 auto 1.2rem;max-width:22ch}
 .hero__lede{color:var(--ink-2);max-width:56ch;margin:0 auto 1.8rem;font-size:clamp(1rem,1.4vw,1.15rem)}
 .hero .btn-row{justify-content:center}
-.hero__scroll{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero__scroll{grid-row:3;font-family:var(--sans);font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
 .hero__scroll::after{content:"";width:1px;height:44px;background:linear-gradient(var(--gold),transparent);animation:drop 2.4s var(--ease) infinite}
 @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
