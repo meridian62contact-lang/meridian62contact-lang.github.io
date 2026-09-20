@@ -466,3 +466,4 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .sector-card--cta{background:linear-gradient(160deg,rgba(201,164,92,.10),rgba(201,164,92,.02));justify-content:center;text-align:left}
 .sector-card--cta h3{margin-top:0}
 @media (max-width:700px){.hero__scroll{display:none}.hero{padding-bottom:56px}}
+@media (max-height:640px){.hero__scroll{display:none}}
