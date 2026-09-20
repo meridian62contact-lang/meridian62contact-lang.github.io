@@ -7,7 +7,7 @@ slug: chemicals
 name: "Chemicals"
 covers: "Commodity and specialty chemicals, fertilisers and feedstock spreads."
 rota_group: C          # A, B or C — which week of the 3-week cycle this desk publishes
-image: ""      # optional cover image, e.g. /assets/img/sectors/03.jpg
+image: "/assets/img/sectors/03.jpg"
 
 analysts:
   - name: "Rudy Redshaw"
