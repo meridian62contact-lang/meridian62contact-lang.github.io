@@ -10,14 +10,14 @@ rota_group: A          # A, B or C — which week of the 3-week cycle this desk 
 image: "/assets/img/sectors/07.jpg"
 
 analysts:
-  - name: "Marianne Fayad"
-    degree: "MEng Biomedical Engineering"
-    university: "Imperial College London"
-  - name: "Sveva Romano"
+    - name: "Sveva Romano"
     degree: "BSc Medical Biochemistry"
     university: "Imperial College London"
-  - name: "Maya Halawi"
-    degree: "MEng Biomedical Engineering"
+    - name: "Carlota Guillamet de Gracia"
+    degree: "BSc Medical Biosciences"
+    university: "Imperial College London"
+  - name: "Lola Theato"
+    degree: "BSc Medical Biosciences"
     university: "Imperial College London"
 
 # 3–5 companies the desk follows all term. 'watching' is the one-sentence coverage line:
