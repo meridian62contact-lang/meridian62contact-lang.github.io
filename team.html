@@ -1,0 +1,82 @@
+---
+layout: default
+title: The team
+eyebrow: Who we are
+lede: Every contributor has a named byline — name, degree, university — and owns a named piece of the market for a term at a time.
+description: The Meridian62 team — sector analysts, editors, the quarterly recap team, outreach and legal.
+permalink: /team/
+---
+{%- assign t = site.data.team -%}
+{%- assign sectors = site.sectors | sort: "number" -%}
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="team-block" data-reveal>
+      <h2>Leads</h2>
+      <div class="people">
+        {%- for p in t.leads -%}{%- if p.name != "" -%}
+        <div class="person"><div class="person__role">{{ p.role }}</div><div class="person__name">{{ p.name }}</div>{% if p.degree != "" or p.university != "" %}<div class="person__meta">{{ p.degree }}{% if p.degree != "" and p.university != "" %} · {% endif %}{{ p.university }}</div>{% endif %}</div>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+
+    <div class="team-block" data-reveal>
+      <h2>Sector desks</h2>
+      <p>Three analysts per desk, three to five companies per desk, one note every third week. Each desk page lists the companies it follows.</p>
+      {%- for s in sectors -%}
+      <div style="margin-bottom:1px">
+        <a href="{{ s.url | relative_url }}" class="eyebrow" style="margin:1.6rem 0 .6rem"><span class="num" style="font-size:.9rem">{{ s.number }}</span>{{ s.name }}</a>
+        <div class="people">
+          {%- assign any = false -%}
+          {%- for a in s.analysts -%}{%- if a.name != "" -%}{%- assign any = true -%}
+          <div class="person"><div class="person__role">Analyst</div><div class="person__name">{{ a.name }}</div>{% if a.degree != "" or a.university != "" %}<div class="person__meta">{{ a.degree }}{% if a.degree != "" and a.university != "" %} · {% endif %}{{ a.university }}</div>{% endif %}</div>
+          {%- endif -%}{%- endfor -%}
+          {%- unless any -%}<div class="person"><div class="person__meta">Desk being staffed</div></div>{%- endunless -%}
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="team-block" data-reveal>
+      <h2>Editors</h2>
+      <p>The editors make every release publishable: structure, sourcing, spelling, plain English, and nothing that reads as advice. They also keep <a href="{{ '/glossary/' | relative_url }}" style="color:var(--gold)">Decoded</a> growing.</p>
+      <div class="people">
+        {%- for p in t.editors -%}{%- if p.name != "" -%}
+        <div class="person"><div class="person__role">Editor</div><div class="person__name">{{ p.name }}</div>{% if p.degree != "" or p.university != "" %}<div class="person__meta">{{ p.degree }}{% if p.degree != "" and p.university != "" %} · {% endif %}{{ p.university }}</div>{% endif %}</div>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+
+    <div class="team-block" data-reveal>
+      <h2>Quarterly Market Recap</h2>
+      <p>Four times a year, twelve weeks of sector coverage become one long piece on what actually happened.</p>
+      <div class="people">
+        {%- for p in t.quarterly -%}{%- if p.name != "" -%}
+        <div class="person"><div class="person__role">Quarterly Recap</div><div class="person__name">{{ p.name }}</div>{% if p.degree != "" or p.university != "" %}<div class="person__meta">{{ p.degree }}{% if p.degree != "" and p.university != "" %} · {% endif %}{{ p.university }}</div>{% endif %}</div>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+
+    <div class="team-block" data-reveal>
+      <h2>Outreach &amp; Legal</h2>
+      <p>Outreach brings in the people who write it and the people who read it. Legal reviews every release for anything that could read as advice or an unsupported allegation.</p>
+      <div class="people">
+        {%- for p in t.outreach -%}{%- if p.name != "" -%}
+        <div class="person"><div class="person__role">Outreach Officer</div><div class="person__name">{{ p.name }}</div>{% if p.degree != "" or p.university != "" %}<div class="person__meta">{{ p.degree }}{% if p.degree != "" and p.university != "" %} · {% endif %}{{ p.university }}</div>{% endif %}</div>
+        {%- endif -%}{%- endfor -%}
+        {%- for p in t.legal -%}{%- if p.name != "" -%}
+        <div class="person"><div class="person__role">{{ p.role }}</div><div class="person__name">{{ p.name }}</div>{% if p.degree != "" or p.university != "" %}<div class="person__meta">{{ p.degree }}{% if p.degree != "" and p.university != "" %} · {% endif %}{{ p.university }}</div>{% endif %}</div>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta" data-reveal>
+      <p class="eyebrow eyebrow--center">Open seats</p>
+      <h2>Own a piece of the market.</h2>
+      <p>Desks recruit at the start of each term. No prior finance experience required — the requirement is that you can read a company's own announcements and write a sentence you can defend.</p>
+      <a class="btn" href="{{ '/join/' | relative_url }}">Write for us</a>
+    </div>
+  </div>
+</section>

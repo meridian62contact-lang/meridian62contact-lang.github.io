@@ -1,0 +1,164 @@
+---
+layout: default
+title: Editors' tools
+eyebrow: For editors and leads
+lede: Fill in the form, copy the result, paste it into GitHub. The tool writes the file exactly the way the website expects it, so nothing breaks.
+description: Meridian62 editors' tools.
+permalink: /editors/
+noindex: true
+extra_js: /assets/js/builder.js
+---
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="note">Weekly note</button>
+      <button role="tab" aria-selected="false" data-tab="sector">Sector setup</button>
+      <button role="tab" aria-selected="false" data-tab="recap">Quarterly recap</button>
+      <button role="tab" aria-selected="false" data-tab="help">How to publish</button>
+    </div>
+
+    <!-- ============ WEEKLY NOTE ============ -->
+    <div class="tool" data-panel="note">
+      <form class="form" id="noteForm" autocomplete="off">
+        <label>Sector desk</label>
+        <select name="sector" id="noteSector"></select>
+        <div class="row">
+          <div><label>Week of <small>The Monday it publishes</small></label><input type="date" name="week" id="noteWeek"></div>
+          <div><label>Authors <small>Comma-separated. Leave empty to use the desk's analysts.</small></label><input type="text" name="authors" placeholder="Youssef, Tommy, Awais"></div>
+        </div>
+        <div class="row">
+          <div><label>Company</label><input type="text" name="company" placeholder="GE Vernova"></div>
+          <div><label>Ticker</label><input type="text" name="ticker" placeholder="GEV"></div>
+        </div>
+        <label>Headline <small>Maximum 12 words. State the point, not the topic.</small></label>
+        <input type="text" name="headline" placeholder="GE Vernova's transformer backlog is becoming a capacity problem">
+        <label>What happened? <small>2–3 sentences. The event, result or development, with the key number or date.</small></label>
+        <textarea name="p1"></textarea>
+        <label>What are people missing? <small>3–5 sentences. The mechanism underneath the headline. One point only.</small></label>
+        <textarea name="p2"></textarea>
+        <label>Why does it matter? <small>2–3 sentences, plain English, for someone outside finance.</small></label>
+        <textarea name="p3"></textarea>
+        <label>What are we watching next? <small>1–2 sentences. The number, event or date that would confirm or change the reading.</small></label>
+        <textarea name="p4"></textarea>
+        <label>Sources <small>One per line: source name, then a space, then the link. Refer to them in the text as [1], [2], [3].</small></label>
+        <textarea name="sources" placeholder="GE Vernova Q2 2026 results https://www.gevernova.com/...&#10;IEA Electricity Grids report https://www.iea.org/..."></textarea>
+        <label>Glossary terms <small>One per line: term, a dash, definition. These go into Decoded, not into the note.</small></label>
+        <textarea name="glossary" placeholder="Backlog - Orders a company has received but not yet delivered.&#10;Book-to-bill - New orders divided by completed sales over the same period."></textarea>
+        <ul class="checks" id="noteChecks"></ul>
+      </form>
+      <div class="output">
+        <p class="eyebrow">1 · The file name</p>
+        <div class="filename" id="noteFilename">—</div>
+        <p class="eyebrow">2 · The file contents</p>
+        <pre id="noteOut">Fill in the form…</pre>
+        <div class="btn-row">
+          <button class="btn" type="button" data-copy="noteOut">Copy file</button>
+          <a class="btn btn--ghost" id="noteGithub" href="#" target="_blank" rel="noopener">Open GitHub → new file</a>
+        </div>
+        <div id="glossaryWrap" class="hidden" style="margin-top:2rem">
+          <p class="eyebrow">3 · Glossary lines for _data/glossary.yml</p>
+          <pre id="glossaryOut"></pre>
+          <div class="btn-row">
+            <button class="btn" type="button" data-copy="glossaryOut">Copy glossary lines</button>
+            <a class="btn btn--ghost" id="glossaryGithub" href="#" target="_blank" rel="noopener">Open glossary.yml</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SECTOR SETUP ============ -->
+    <div class="tool hidden" data-panel="sector">
+      <form class="form" id="sectorForm" autocomplete="off">
+        <label>Sector desk</label>
+        <select name="sector" id="sectorSelect"></select>
+        <label>What the desk covers <small>One sentence, shown under the sector title.</small></label>
+        <input type="text" name="covers">
+        <label>Cover image <small>Optional. Upload a square image to assets/img/sectors/ and put its path here, e.g. /assets/img/sectors/05.jpg</small></label>
+        <input type="text" name="image">
+        <p class="eyebrow" style="margin-top:2rem">Analysts</p>
+        <div id="analystRows"></div>
+        <button class="btn-mini" type="button" id="addAnalyst">+ Add analyst</button>
+        <p class="eyebrow" style="margin-top:2rem">Equities (3–5)</p>
+        <div id="equityRows"></div>
+        <button class="btn-mini" type="button" id="addEquity">+ Add equity</button>
+        <label>Introduction <small>Optional short paragraph about the desk, shown under the equities.</small></label>
+        <textarea name="intro"></textarea>
+        <ul class="checks" id="sectorChecks"></ul>
+      </form>
+      <div class="output">
+        <p class="eyebrow">1 · The file to replace</p>
+        <div class="filename" id="sectorFilename">—</div>
+        <p class="eyebrow">2 · The complete file contents</p>
+        <pre id="sectorOut">Choose a sector…</pre>
+        <div class="btn-row">
+          <button class="btn" type="button" data-copy="sectorOut">Copy file</button>
+          <a class="btn btn--ghost" id="sectorGithub" href="#" target="_blank" rel="noopener">Open GitHub → edit file</a>
+        </div>
+        <p class="small" style="margin-top:1rem">On GitHub: open the file, click the pencil, select everything (Ctrl/Cmd + A), paste, then “Commit changes”.</p>
+      </div>
+    </div>
+
+    <!-- ============ QUARTERLY RECAP ============ -->
+    <div class="tool hidden" data-panel="recap">
+      <form class="form" id="recapForm" autocomplete="off">
+        <div class="row">
+          <div><label>Quarter label</label><input type="text" name="quarter" placeholder="Autumn 2026"></div>
+          <div><label>Publish date</label><input type="date" name="published"></div>
+        </div>
+        <label>Title <small>States the quarter's point, like a headline.</small></label>
+        <input type="text" name="title" placeholder="The quarter the grid became the bottleneck">
+        <label>Standfirst <small>One or two sentences shown under the title.</small></label>
+        <input type="text" name="lede">
+        <label>Authors <small>Comma-separated</small></label>
+        <input type="text" name="authors" placeholder="Emil Mingaliev, Nico, Aarohi">
+        <label>Body <small>Paste the whole recap. Use a line starting with ## for each section heading. Blank line between paragraphs.</small></label>
+        <textarea name="body" style="min-height:320px"></textarea>
+        <label>Sources <small>One per line: source name, a space, then the link.</small></label>
+        <textarea name="sources"></textarea>
+        <ul class="checks" id="recapChecks"></ul>
+      </form>
+      <div class="output">
+        <p class="eyebrow">1 · The file name</p>
+        <div class="filename" id="recapFilename">—</div>
+        <p class="eyebrow">2 · The file contents</p>
+        <pre id="recapOut">Fill in the form…</pre>
+        <div class="btn-row">
+          <button class="btn" type="button" data-copy="recapOut">Copy file</button>
+          <a class="btn btn--ghost" id="recapGithub" href="#" target="_blank" rel="noopener">Open GitHub → new file</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ HELP ============ -->
+    <div class="hidden" data-panel="help">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Publishing a weekly note</p>
+          <ol class="steps">
+            <li><div><b>Open the Weekly note tab</b> and paste the desk's finished note into the boxes. The checks underneath the form turn green when the note meets the rules.</div></li>
+            <li><div><b>Copy file</b>, then click <b>Open GitHub → new file</b>. Sign in if asked.</div></li>
+            <li><div>In the <b>Name your file</b> box at the top, paste the file name shown under “1 · The file name”.</div></li>
+            <li><div>Click in the big empty box and paste the file contents.</div></li>
+            <li><div>Click the green <b>Commit changes</b> button, then <b>Commit changes</b> again in the pop-up.</div></li>
+            <li><div>Wait one to two minutes, then refresh the sector page. The note is live. If it is not there after five minutes, see the troubleshooting section of the Website Manual.</div></li>
+            <li><div>If the desk listed glossary terms, copy the glossary lines, click <b>Open glossary.yml</b>, click the pencil, paste the lines at the very bottom, and commit.</div></li>
+          </ol>
+        </div>
+        <div>
+          <p class="eyebrow">Rules the tool checks</p>
+          <ul class="checks">
+            <li class="ok">One equity from the desk's coverage list.</li>
+            <li class="ok">Headline is 12 words or fewer and states the point.</li>
+            <li class="ok">250–400 words across the four paragraphs.</li>
+            <li class="ok">At least one source, every source has a link.</li>
+            <li class="ok">No advice language: buy, sell, cheap, expensive, undervalued, overvalued, price target, I would invest.</li>
+            <li class="ok">Week is a Monday.</li>
+          </ul>
+          <p class="eyebrow" style="margin-top:2.4rem">Publishing later</p>
+          <p class="small">To stage a note on Sunday evening without it going live, change <code>published: true</code> to <code>published: false</code> before committing. On Monday morning open the file, click the pencil, change it back to <code>true</code> and commit. The note appears within two minutes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="toast" id="toast">Copied</div>

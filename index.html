@@ -1,0 +1,172 @@
+---
+layout: default
+title: Meridian62
+show_hero: false
+body_class: home
+---
+{%- assign sectors = site.sectors | sort: "number" -%}
+{%- assign all_notes = site.notes | where_exp: "n", "n.published != false" | sort: "week" | reverse -%}
+{%- assign latest_week = "" -%}
+{%- if all_notes.size > 0 -%}{%- assign latest_week = all_notes[0].week | date: "%Y-%m-%d" -%}{%- endif -%}
+
+<section class="hero">
+  <div class="hero__lines" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+      <g stroke="#C9A45C" stroke-opacity=".18" stroke-width="1">
+        <ellipse cx="720" cy="450" rx="700" ry="700"/>
+        <ellipse cx="720" cy="450" rx="700" ry="330"/>
+        <ellipse cx="720" cy="450" rx="700" ry="120"/>
+        <ellipse cx="720" cy="450" rx="330" ry="700"/>
+        <ellipse cx="720" cy="450" rx="120" ry="700"/>
+        <line x1="0" y1="450" x2="1440" y2="450"/>
+        <line x1="720" y1="0" x2="720" y2="900"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero__inner wrap">
+    {% include logo-mark.html class="mark--hero" %}
+    <p class="hero__tag" data-enter="1">{{ site.tagline }}</p>
+    <h1 class="hero__title" data-enter="2">Meridian</h1>
+    <p class="hero__sub" data-enter="3">Sixty-Two</p>
+    <p class="hero__line" data-enter="4">One market. Many angles.</p>
+    <p class="hero__lede" data-enter="5">A weekly market publication written by students across universities, degrees and countries — every note on a named company, sourced from what the company itself published, and written so that anyone can read it.</p>
+    <div class="btn-row" data-enter="6">
+      <a class="btn" href="{{ '/sectors/' | relative_url }}">Read the sectors</a>
+      <a class="btn btn--ghost" href="{{ '/about/' | relative_url }}">What we are</a>
+    </div>
+  </div>
+  <div class="hero__scroll" data-enter="7">Scroll</div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    {%- for i in (1..2) -%}{%- for s in sectors -%}<span class="ticker__item"><b>{{ s.number }}</b>{{ s.name }}</span>{%- endfor -%}{%- endfor -%}
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div data-reveal>
+        <p class="eyebrow">What we are</p>
+        <p class="statement">A student newsroom that follows <em>named companies</em>, week after week — and explains them in plain English.</p>
+      </div>
+      <div data-reveal>
+        <p class="lede">Every contributor owns a short list of companies inside one sector and reads what those companies actually publish: results, filings, capital-markets days, press releases. Each week a few desks write one short note that makes one clear point. Different degrees, different countries, different languages — the same market, read from every angle.</p>
+        <p style="margin-top:1.6rem"><a class="arrow-link" href="{{ '/about/' | relative_url }}">Why Meridian62 exists</a></p>
+      </div>
+    </div>
+    <div class="stats" style="margin-top:clamp(40px,6vw,72px)" data-reveal-stagger>
+      <div class="stat"><b>11</b><span>Sector desks</span></div>
+      <div class="stat"><b>{{ site.contributors_count }}</b><span>Student contributors</span></div>
+      <div class="stat"><b>{{ site.universities_count }}</b><span>Universities</span></div>
+      <div class="stat"><b>Mon</b><span>Publishes every Monday</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" style="padding-top:0">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <div><p class="eyebrow">What we do</p><h2>Three things, done properly.</h2></div>
+    </div>
+    <div class="pillars" data-reveal-stagger>
+      <a class="pillar" href="{{ '/sectors/' | relative_url }}">
+        <span class="num">01</span>
+        <h3>Weekly sector notes</h3>
+        <p>250–400 words on one company a desk covers. What happened, what people are missing, why it matters, and what we are watching next. Every number sourced.</p>
+      </a>
+      <a class="pillar" href="{{ '/quarterly/' | relative_url }}">
+        <span class="num">02</span>
+        <h3>Quarterly market recap</h3>
+        <p>Four times a year, a long read that turns twelve weeks of desk coverage into the handful of things that actually connected the market.</p>
+      </a>
+      <a class="pillar" href="{{ '/glossary/' | relative_url }}">
+        <span class="num">03</span>
+        <h3>Decoded</h3>
+        <p>Every specialist term we use, defined in one plain sentence. A glossary that grows with every note, so nobody needs a finance degree to read one.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="latest">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <div>
+        <p class="eyebrow">{% if latest_week != "" %}Latest release · Week of {{ all_notes[0].week | date: "%-d %B %Y" }}{% else %}Latest release{% endif %}</p>
+        <h2>{% if latest_week != "" %}This week's notes{% else %}First release: Monday {{ site.first_release | date: "%-d %B %Y" }}{% endif %}</h2>
+      </div>
+      <a class="arrow-link" href="{{ '/schedule/' | relative_url }}">Publishing schedule</a>
+    </div>
+    {%- if latest_week != "" -%}
+    <div class="latest" data-reveal-stagger>
+      {%- for n in all_notes -%}
+        {%- assign w = n.week | date: "%Y-%m-%d" -%}
+        {%- if w == latest_week -%}
+          {%- assign s = sectors | where: "slug", n.sector | first -%}
+          <a class="latest__item" href="{{ s.url | relative_url }}#{{ w }}">
+            <div class="note__meta"><span><b>{{ s.number }}</b> {{ s.name }}</span>{% if n.equity %}<span>{{ n.equity }}</span>{% endif %}</div>
+            <h3>{{ n.headline }}</h3>
+            <p>{{ n.content | markdownify | strip_html | truncatewords: 34 }}</p>
+            <span class="arrow-link">Read the note</span>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+    {%- else -%}
+    <div class="callout" data-reveal>
+      <b>Launching September 2026</b>
+      The desks are choosing the companies they will follow this term. The first notes go live on Monday {{ site.first_release | date: "%-d %B %Y" }}, and from then on a few desks publish every Monday morning on a fixed rota. Until then, read <a href="{{ '/about/' | relative_url }}" style="color:var(--gold)">what we are</a> and meet <a href="{{ '/team/' | relative_url }}" style="color:var(--gold)">the team</a>.
+    </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<section class="section section--alt" style="padding-top:0">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <div><p class="eyebrow">The rota</p><h2>Who publishes when</h2></div>
+      <a class="arrow-link" href="{{ '/schedule/' | relative_url }}">Full term calendar</a>
+    </div>
+    {% include week-strip.html %}
+  </div>
+</section>
+
+<section class="section" id="sectors">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <div><p class="eyebrow">Eleven desks</p><h2>Every corner of the market, owned by someone who studies it.</h2></div>
+    </div>
+    <div class="sector-grid" data-reveal-stagger>
+      {%- for s in sectors -%}{% include sector-card.html sector=s %}{%- endfor -%}
+      <a class="sector-card sector-card--cta" href="{{ '/join/' | relative_url }}">
+        <div class="sector-card__top"><span class="sector-card__num">12</span><span class="sector-card__group">Open seats</span></div>
+        <div><h3>Your desk?</h3><p>Desks recruit at the start of each term. No finance degree needed — the requirement is that you can read a company's own announcements.</p></div>
+        <span class="arrow-link">Write for us</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    {% include logo-mark.html %}
+    <blockquote>Built by students.<br>Made for everyone.</blockquote>
+    <cite>Meridian62 · {{ site.tagline }}</cite>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cta" data-reveal>
+      <p class="eyebrow eyebrow--center">Recruiting season?</p>
+      <h2>“What company do you actually follow?”</h2>
+      <p>Every Meridian62 analyst has an answer, a byline to prove it and twelve weeks of notes behind it. Readers get the same market, explained by the people who study the engineering, science and economics underneath it.</p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn" href="{{ '/join/' | relative_url }}">Write for us</a>
+        <a class="btn btn--ghost" href="{{ '/team/' | relative_url }}">Meet the team</a>
+      </div>
+    </div>
+  </div>
+</section>

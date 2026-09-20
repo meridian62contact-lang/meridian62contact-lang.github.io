@@ -1,0 +1,59 @@
+# =============================================================
+#  PUBLISHING SCHEDULE
+#  One entry per Monday. "desks" lists the sector slugs that publish that week
+#  (the slug is the "slug:" line in each file inside the _sectors folder).
+#  To skip a week (exam period, holidays) set  desks: []  and add a note.
+#  The site reads this file to show "This week" and "Next week".
+# =============================================================
+
+term: "Autumn Term 2026"
+cycle:
+  A: [energy-utilities, industrials-capital-goods-transport, pharmaceuticals-biotech-life-sciences, macro-rates-fx]
+  B: [materials-mining-infrastructure, technology-semiconductors, financials-banks, consumer-retail-luxury]
+  C: [chemicals, healthcare-services-medical-equipment, aerospace-defence]
+
+weeks:
+  - date: 2026-09-28
+    group: A
+    desks: [energy-utilities, industrials-capital-goods-transport, pharmaceuticals-biotech-life-sciences, macro-rates-fx]
+  - date: 2026-10-05
+    group: B
+    desks: [materials-mining-infrastructure, technology-semiconductors, financials-banks, consumer-retail-luxury]
+  - date: 2026-10-12
+    group: C
+    desks: [chemicals, healthcare-services-medical-equipment, aerospace-defence]
+  - date: 2026-10-19
+    group: A
+    desks: [energy-utilities, industrials-capital-goods-transport, pharmaceuticals-biotech-life-sciences, macro-rates-fx]
+  - date: 2026-10-26
+    group: B
+    desks: [materials-mining-infrastructure, technology-semiconductors, financials-banks, consumer-retail-luxury]
+  - date: 2026-11-02
+    group: C
+    desks: [chemicals, healthcare-services-medical-equipment, aerospace-defence]
+  - date: 2026-11-09
+    group: A
+    desks: [energy-utilities, industrials-capital-goods-transport, pharmaceuticals-biotech-life-sciences, macro-rates-fx]
+  - date: 2026-11-16
+    group: B
+    desks: [materials-mining-infrastructure, technology-semiconductors, financials-banks, consumer-retail-luxury]
+  - date: 2026-11-23
+    group: C
+    desks: [chemicals, healthcare-services-medical-equipment, aerospace-defence]
+  - date: 2026-11-30
+    group: A
+    desks: [energy-utilities, industrials-capital-goods-transport, pharmaceuticals-biotech-life-sciences, macro-rates-fx]
+  - date: 2026-12-07
+    group: B
+    desks: [materials-mining-infrastructure, technology-semiconductors, financials-banks, consumer-retail-luxury]
+  - date: 2026-12-14
+    group: C
+    desks: [chemicals, healthcare-services-medical-equipment, aerospace-defence]
+  - date: 2026-12-21
+    group: ""
+    desks: []
+    note: "Winter break — no release"
+  - date: 2027-01-11
+    group: ""
+    desks: []
+    note: "Quarterly Market Recap · Autumn 2026"

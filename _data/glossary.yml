@@ -1,0 +1,29 @@
+# =============================================================
+#  DECODED — THE MERIDIAN62 GLOSSARY
+#  Editors: paste new terms at the bottom. Three lines per term.
+#  Keep the quotes. The site sorts everything alphabetically for you.
+# =============================================================
+
+- term: "Backlog"
+  definition: "Orders a company has received but has not yet delivered — its confirmed future work."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Book-to-bill"
+  definition: "New orders divided by completed sales over the same period. Above 1 means orders are arriving faster than they are being completed."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Guidance"
+  definition: "A company's own forecast of what it expects its sales or profits to be over the coming months, given to investors so they are not surprised later."
+  sector: ""
+
+- term: "Earnings"
+  definition: "A company's profit over a period, usually reported every three months. 'Earnings season' is the few weeks when most large companies report at once."
+  sector: ""
+
+- term: "Basis point"
+  definition: "One hundredth of one percent. If an interest rate rises from 4.00% to 4.25%, it has risen by 25 basis points."
+  sector: "macro-rates-fx"
+
+- term: "Yield curve"
+  definition: "A line showing the interest rate a government pays to borrow for different lengths of time, from a few months to thirty years. Its shape is read as a signal about the economy."
+  sector: "macro-rates-fx"

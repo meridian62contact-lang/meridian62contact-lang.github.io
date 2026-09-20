@@ -1,0 +1,41 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <a class="brand" href="{{ '/' | relative_url }}">{% include logo-mark.html %}<span class="brand__word">Meridian<small>Sixty-Two</small></span></a>
+        <p>{{ site.slogan }} A weekly market publication written by students across universities, degrees and countries. Every Monday morning.</p>
+      </div>
+      <div>
+        <h4>Read</h4>
+        <ul>
+          <li><a href="{{ '/sectors/' | relative_url }}">Sector notes</a></li>
+          <li><a href="{{ '/quarterly/' | relative_url }}">Quarterly recap</a></li>
+          <li><a href="{{ '/glossary/' | relative_url }}">Decoded · glossary</a></li>
+          <li><a href="{{ '/schedule/' | relative_url }}">Publishing schedule</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Meridian62</h4>
+        <ul>
+          <li><a href="{{ '/about/' | relative_url }}">What we are</a></li>
+          <li><a href="{{ '/team/' | relative_url }}">The team</a></li>
+          <li><a href="{{ '/join/' | relative_url }}">Write for us</a></li>
+          <li><a href="{{ '/legal/' | relative_url }}">Legal &amp; disclaimer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          {% if site.linkedin_url != "" %}<li><a href="{{ site.linkedin_url }}" rel="noopener" target="_blank">LinkedIn</a></li>{% endif %}
+          {% if site.instagram_url != "" %}<li><a href="{{ site.instagram_url }}" rel="noopener" target="_blank">Instagram</a></li>{% endif %}
+          {% if site.tiktok_url != "" %}<li><a href="{{ site.tiktok_url }}" rel="noopener" target="_blank">TikTok</a></li>{% endif %}
+          {% if site.contact_email != "" %}<li><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></li>{% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© {{ site.time | date: "%Y" }} Meridian62 · {{ site.based_in }} · Published every Monday.</span>
+      <span>Nothing on this site is investment advice. <a href="{{ '/legal/' | relative_url }}">Read the full disclaimer.</a></span>
+    </div>
+  </div>
+</footer>

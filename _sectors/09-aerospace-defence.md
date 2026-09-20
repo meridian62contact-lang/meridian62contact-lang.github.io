@@ -1,0 +1,31 @@
+---
+# ===== SECTOR 09 — Aerospace & Defence =====
+# Fill in the analysts and the 3–5 equities once at the start of term.
+# Keep the two-space indentation exactly as shown. Empty values ("") are hidden on the site.
+number: "09"
+slug: aerospace-defence
+name: "Aerospace & Defence"
+covers: "Aircraft delivery rates, defence budgets and engine supply chains."
+rota_group: C          # A, B or C — which week of the 3-week cycle this desk publishes
+image: ""      # optional cover image, e.g. /assets/img/sectors/09.jpg
+
+analysts:
+  - name: "Katja"
+    degree: ""
+    university: ""
+  - name: "Noah"
+    degree: ""
+    university: ""
+  - name: "Lorenz"
+    degree: "Statistics and Data Analytics"
+    university: "Universität Wien"
+
+# 3–5 companies the desk follows all term. 'watching' is the one-sentence coverage line:
+# the specific thing the desk is watching right now (update it whenever it changes).
+equities:
+  # - company: "Company name"
+  #   ticker: "TICKER"
+  #   watching: "The one specific thing we are watching right now."
+---
+
+<!-- Optional: write a short introduction to the desk below this line. It appears under the equities. -->

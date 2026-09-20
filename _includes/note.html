@@ -1,0 +1,25 @@
+{%- comment -%} Renders one weekly note. Usage: {% include note.html note=n sector=s heading="h2" %} {%- endcomment -%}
+{%- assign n = include.note -%}
+{%- assign s = include.sector -%}
+{%- assign week_id = n.week | date: "%Y-%m-%d" -%}
+<article class="note" id="{{ week_id }}">
+  <div class="note__meta">
+    <span>Week of <b>{{ n.week | date: "%-d %B %Y" }}</b></span>
+    {% if n.equity %}<span>Equity <b>{{ n.equity }}</b></span>{% endif %}
+    {% if include.show_sector and s %}<span>Desk <b><a href="{{ s.url | relative_url }}">{{ s.number }} · {{ s.name }}</a></b></span>{% endif %}
+  </div>
+  <h2 class="note__headline">{{ n.headline }}</h2>
+  {%- assign names = "" -%}
+  {%- if n.authors and n.authors.size > 0 -%}
+    {%- assign names = n.authors | join: ", " -%}
+  {%- elsif s and s.analysts -%}
+    {%- assign list = "" | split: "" -%}
+    {%- for a in s.analysts -%}{%- if a.name != "" -%}{%- assign list = list | push: a.name -%}{%- endif -%}{%- endfor -%}
+    {%- assign names = list | join: ", " -%}
+  {%- endif -%}
+  {% if names != "" %}<p class="note__by">By {{ names }}{% if s %} · {{ s.name }} desk{% endif %}</p>{% endif %}
+  <div class="note__body">
+    {{ n.content | markdownify }}
+  </div>
+  <p class="note__foot">Meridian62 notes explain what is happening and why. They are not investment advice and do not recommend buying or selling anything. <a href="{{ '/legal/' | relative_url }}">Read the disclaimer.</a></p>
+</article>

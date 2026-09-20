@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Quarterly Market Recap · {{ page.quarter }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.lede %}<p class="lede">{{ page.lede }}</p>{% endif %}
+    {% if page.authors and page.authors.size > 0 %}<p class="note__by" style="margin-top:1.4rem">By {{ page.authors | join: ", " }} · Quarterly Recap team · Published {{ page.date | date: "%-d %B %Y" }}</p>{% endif %}
+  </div>
+</section>
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="note__body prose" style="max-width:70ch">
+      {{ content }}
+    </div>
+    <p class="note__foot">Meridian62 recaps explain what happened and why. They are not investment advice. <a href="{{ '/legal/' | relative_url }}">Read the disclaimer.</a></p>
+    <p style="margin-top:2.4rem"><a class="arrow-link" href="{{ '/quarterly/' | relative_url }}">All quarterly recaps</a></p>
+  </div>
+</section>

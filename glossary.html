@@ -1,0 +1,50 @@
+---
+layout: default
+title: Decoded
+eyebrow: The glossary
+lede: Every specialist term used in a Meridian62 note, defined in one plain sentence. It grows with every release.
+description: Decoded — the Meridian62 glossary. Financial and industry terms explained in one plain sentence each.
+permalink: /glossary/
+---
+{%- assign terms = site.data.glossary | sort_natural: "term" -%}
+{%- assign sectors = site.sectors -%}
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <input class="search" type="search" placeholder="Search a term…" aria-label="Search the glossary" data-glossary-search>
+    <nav class="glossary-nav" aria-label="Jump to letter">
+      {%- assign alphabet = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z" | split: "," -%}
+      {%- for L in alphabet -%}
+        {%- assign has = false -%}
+        {%- for t in terms -%}{%- assign f = t.term | slice: 0 | upcase -%}{%- if f == L -%}{%- assign has = true -%}{%- endif -%}{%- endfor -%}
+        {%- if has -%}<a href="#letter-{{ L }}">{{ L }}</a>{%- else -%}<span>{{ L }}</span>{%- endif -%}
+      {%- endfor -%}
+    </nav>
+    <div data-reveal>
+    {%- assign current = "" -%}
+    {%- for t in terms -%}
+      {%- assign f = t.term | slice: 0 | upcase -%}
+      {%- if f != current -%}
+        {%- assign current = f -%}
+        <h2 class="glossary-letter" id="letter-{{ f }}">{{ f }}</h2>
+      {%- endif -%}
+      <dl class="term">
+        <dt>{{ t.term }}</dt>
+        <dd>{{ t.definition }}
+          {%- if t.sector and t.sector != "" -%}{%- assign s = sectors | where: "slug", t.sector | first -%}{%- if s %}<div class="small">From the <a href="{{ s.url | relative_url }}" style="color:var(--gold)">{{ s.name }}</a> desk</div>{% endif -%}{%- endif -%}
+        </dd>
+      </dl>
+    {%- endfor -%}
+    </div>
+    {%- if terms.size == 0 -%}<p class="empty">The glossary fills up with the first release.</p>{%- endif -%}
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="cta" data-reveal>
+      <p class="eyebrow eyebrow--center">Why a glossary</p>
+      <h2>Nobody should need a finance degree to read the news.</h2>
+      <p>Every desk lists the specialist terms it used, and the editors add them here with a definition an ordinary reader can use. If a word in a note still isn't clear, tell us — that is a mistake we want to fix.</p>
+      {% if site.contact_email != "" %}<a class="btn" href="mailto:{{ site.contact_email }}?subject=Decoded%20—%20a%20term%20I%20did%20not%20understand">Suggest a term</a>{% endif %}
+    </div>
+  </div>
+</section>

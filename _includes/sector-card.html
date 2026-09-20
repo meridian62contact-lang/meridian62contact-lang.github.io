@@ -1,0 +1,9 @@
+{%- assign s = include.sector -%}
+<a class="sector-card" href="{{ s.url | relative_url }}">
+  <div class="sector-card__top"><span class="sector-card__num">{{ s.number }}</span><span class="sector-card__group">Week {{ s.rota_group }}</span></div>
+  <div>
+    <h3>{{ s.name }}</h3>
+    <p>{{ s.covers }}</p>
+  </div>
+  <span class="arrow-link">Open the desk</span>
+</a>

@@ -1,0 +1,64 @@
+---
+layout: default
+title: Publishing Schedule
+eyebrow: The rota
+lede: Every Monday morning a few desks publish. The cycle is three weeks long, so each desk publishes once every three weeks and four times a term.
+description: When each Meridian62 sector desk publishes — the full term calendar.
+permalink: /schedule/
+---
+{%- assign sectors = site.sectors | sort: "number" -%}
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">Coming up</p>
+    {% include week-strip.html %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <div><p class="eyebrow">{{ site.data.schedule.term }}</p><h2>The full calendar</h2></div>
+      <span class="small">Analyst deadline Friday 18:00 · Editors Sunday 20:00 · Live Monday morning</span>
+    </div>
+    <table class="calendar" data-reveal>
+      <thead><tr><th>Week of</th><th>Cycle</th><th>Desks publishing</th></tr></thead>
+      <tbody>
+        {%- for w in site.data.schedule.weeks -%}
+        {%- assign d = w.date | date: "%Y-%m-%d" -%}
+        <tr data-week="{{ d }}">
+          <td>{{ w.date | date: "%-d %b %Y" }}<span class="tag hidden" data-week-label></span></td>
+          <td>{% if w.group != "" %}Week {{ w.group }}{% else %}—{% endif %}</td>
+          <td>
+            {%- if w.desks.size > 0 -%}
+            <div class="desklist">
+              {%- for slug in w.desks -%}{%- assign s = sectors | where: "slug", slug | first -%}{%- if s -%}
+              <a href="{{ s.url | relative_url }}"><span class="num">{{ s.number }}</span>{{ s.name }}</a>
+              {%- endif -%}{%- endfor -%}
+            </div>
+            {%- else -%}<em class="muted">{{ w.note }}</em>{%- endif -%}
+          </td>
+        </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="week-strip" data-reveal-stagger>
+      {%- assign groups = "A,B,C" | split: "," -%}
+      {%- for g in groups -%}
+      <div class="week">
+        <div class="week__label"><span>Cycle week {{ g }}</span></div>
+        <div class="week__date">{% if g == "A" %}Four desks{% elsif g == "B" %}Four desks{% else %}Three desks{% endif %}</div>
+        <ul>
+          {%- for slug in site.data.schedule.cycle[g] -%}{%- assign s = sectors | where: "slug", slug | first -%}{%- if s -%}
+          <li><span class="num">{{ s.number }}</span><a href="{{ s.url | relative_url }}">{{ s.name }}</a></li>
+          {%- endif -%}{%- endfor -%}
+        </ul>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

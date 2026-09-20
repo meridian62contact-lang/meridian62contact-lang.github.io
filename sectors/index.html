@@ -1,0 +1,35 @@
+---
+layout: default
+title: Sectors
+eyebrow: Eleven desks
+lede: Each desk is three analysts who study the discipline underneath the sector, three to five companies they follow all term, and one note every third week.
+description: The eleven Meridian62 sector desks — energy, materials, chemicals, industrials, technology, healthcare, pharma, financials, aerospace, macro and consumer.
+permalink: /sectors/
+---
+{%- assign sectors = site.sectors | sort: "number" -%}
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="sector-grid" data-reveal-stagger>
+      {%- for s in sectors -%}{% include sector-card.html sector=s %}{%- endfor -%}
+      <a class="sector-card sector-card--cta" href="{{ '/join/' | relative_url }}">
+        <div class="sector-card__top"><span class="sector-card__num">12</span><span class="sector-card__group">Open seats</span></div>
+        <div><h3>Your desk?</h3><p>Desks recruit at the start of each term. No finance degree needed — the requirement is that you can read a company's own announcements.</p></div>
+        <span class="arrow-link">Write for us</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="split" data-reveal>
+      <div>
+        <p class="eyebrow">How a desk works</p>
+        <h2>Same companies, all term.</h2>
+      </div>
+      <div class="prose">
+        <p>The equities belong to the desk, not to individual analysts, and they stay fixed for the term so that coverage builds week on week. Each publishing week the desk picks the one company with the most meaningful development — results, a contract, a competitor's numbers, a regulation, a commodity move — and writes 250–400 words that make one point.</p>
+        <p>Desks publish on a three-week rota, so every Monday brings three or four fresh notes and every desk writes four notes a term. <a href="{{ '/schedule/' | relative_url }}">See the full schedule.</a></p>
+      </div>
+    </div>
+  </div>
+</section>

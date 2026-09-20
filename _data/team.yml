@@ -1,0 +1,55 @@
+# =============================================================
+#  TEAM (everyone who is not on a sector desk — desk analysts are
+#  listed automatically from the files in the _sectors folder)
+#  Empty values ("") are hidden on the site.
+# =============================================================
+
+leads:
+  - name: "Sophia Zampolli"
+    role: "Founder & Project Lead"
+    degree: "MEng Chemical Engineering"
+    university: "Imperial College London"
+  - name: ""
+    role: "Co-Lead"
+    degree: ""
+    university: ""
+
+editors:
+  - name: "Hannah"
+    degree: ""
+    university: ""
+  - name: "Maggie"
+    degree: ""
+    university: ""
+
+quarterly:
+  - name: "Emil Mingaliev"
+    degree: ""
+    university: ""
+  - name: "Nico"
+    degree: ""
+    university: ""
+  - name: "Aarohi"
+    degree: ""
+    university: ""
+
+outreach:
+  - name: "Carlotta"
+    degree: ""
+    university: ""
+  - name: "Felicitas"
+    degree: "BSc Management"
+    university: "ESCP Business School"
+
+legal:
+  - name: "Andrew"
+    role: "Head of Legal Counsel & Limitation of Liability"
+    degree: ""
+    university: ""
+
+# Universities represented (shown on the About page). Add or remove freely.
+universities:
+  - "Imperial College London"
+  - "London School of Economics"
+  - "Universität Wien"
+  - "ESCP Business School"

@@ -1,0 +1,21 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070B14">
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- if page.url == "/" -%}
+    <title>{{ site.title }} — {{ site.tagline }}</title>
+  {%- else -%}
+    <title>{{ page_title }} · {{ site.title }}</title>
+  {%- endif -%}
+  {%- if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/brand/favicon.svg' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/brand/mark.png' | relative_url }}">
+  <meta property="og:image" content="{{ '/assets/img/brand/og-image.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="{{ '/assets/fonts/bodoni-moda-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/inter-latin-500-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}?v=1">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=1">
+  {% seo title=false %}
+</head>

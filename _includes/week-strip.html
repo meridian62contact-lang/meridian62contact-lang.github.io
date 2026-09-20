@@ -1,0 +1,19 @@
+{%- assign sectors = site.sectors | sort: "number" -%}
+<div class="week-strip" data-week-strip data-reveal-stagger>
+  {%- for w in site.data.schedule.weeks -%}
+  {%- assign d = w.date | date: "%Y-%m-%d" -%}
+  <div class="week" data-week="{{ d }}">
+    <div class="week__label"><span data-week-label>Week of</span>{% if w.group != "" %}<span>Cycle week {{ w.group }}</span>{% endif %}</div>
+    <div class="week__date">{{ w.date | date: "%-d %B" }}</div>
+    {%- if w.desks.size > 0 -%}
+    <ul>
+      {%- for slug in w.desks -%}{%- assign s = sectors | where: "slug", slug | first -%}{%- if s -%}
+      <li><span class="num">{{ s.number }}</span><a href="{{ s.url | relative_url }}">{{ s.name }}</a></li>
+      {%- endif -%}{%- endfor -%}
+    </ul>
+    {%- else -%}
+    <p class="small">{{ w.note }}</p>
+    {%- endif -%}
+  </div>
+  {%- endfor -%}
+</div>

@@ -1,0 +1,84 @@
+---
+layout: default
+title: What we are
+eyebrow: About Meridian62
+lede: A weekly market publication written by students across universities, degrees and countries. Built by students. Made for everyone.
+description: What Meridian62 is, why it exists and how it works — a student-written weekly market publication that anyone can read.
+permalink: /about/
+---
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="split">
+      <div class="prose" data-reveal>
+        <p>It's recruiting season, and we all get asked the same questions. <strong>What financial news are you following? What company do you actually watch? How do you stay on top of markets?</strong></p>
+        <p>Meridian62 is our answer. Across eleven sectors — from industrials and semiconductors to biotech, energy, macro and consumer — students own a short list of named companies and follow them week after week. Not a summary of the news: a reading of what the companies themselves publish, written by people who study the engineering, science or economics underneath the sector.</p>
+        <p>Two things make it different from a university finance society. Every contributor owns a named list of companies and follows them for a whole term. And every piece is written so that someone outside finance can actually read it — every specialist term goes into <a href="{{ '/glossary/' | relative_url }}">Decoded</a>, our glossary, in one plain sentence.</p>
+        <p>The name is the idea. A meridian is a line you can take a bearing from. Sixty-two is where we drew ours.</p>
+      </div>
+      <div data-reveal>
+        <div class="feature"><img src="{{ '/assets/img/brand/editors.jpg' | relative_url }}" alt="An editor's desk at night: style guides, a newspaper and a fountain pen" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <div><p class="eyebrow">How we write</p><h2>Five rules, no exceptions.</h2></div>
+    </div>
+    <div class="principles" data-reveal-stagger>
+      <div class="principle"><div><h3>Read the source, not the summary.</h3><p>Results announcements, capital-markets days, filings and press releases are public and free. Reading them directly is the single habit that separates this from summarising the news.</p></div></div>
+      <div class="principle"><div><h3>One company, one idea.</h3><p>Every note is centred on one of the desk's equities and makes one point. If the idea cannot be stated in the first sentence, it is not ready.</p></div></div>
+      <div class="principle"><div><h3>Every number has a source.</h3><p>Factual claims and figures carry a numbered reference to the document they came from — wherever possible, the company's own.</p></div></div>
+      <div class="principle"><div><h3>Plain English, always.</h3><p>Written for the version of you from before you knew the jargon. Any term that needs defining is defined, and goes into Decoded.</p></div></div>
+      <div class="principle"><div><h3>Never advice.</h3><p>We explain what is happening and why. We do not say buy, sell, cheap or expensive, and we do not recommend anything. <a href="{{ '/legal/' | relative_url }}" style="color:var(--gold)">Read the disclaimer.</a></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <div data-reveal>
+        <p class="eyebrow">How it works</p>
+        <h2>A week at Meridian62</h2>
+      </div>
+      <div data-reveal>
+        <ol class="steps">
+          <li><div><b>Monday morning.</b> Three or four desks go live on the site. Every desk publishes once every three weeks, on a fixed rota.</div></li>
+          <li><div><b>During the week.</b> The desks publishing next follow their companies — results, filings, competitor news, regulation, commodity moves — and choose the one equity with the most meaningful development.</div></li>
+          <li><div><b>Friday 18:00.</b> The desk's note is finished: 250–400 words, one headline that states the point, four short paragraphs, sources listed, jargon flagged.</div></li>
+          <li><div><b>Sunday 20:00.</b> The editors have checked it — structure, sourcing, plain English, nothing that reads as advice — and it is ready to publish.</div></li>
+          <li><div><b>Every twelve weeks.</b> The recap team turns a term of notes into one long read on what actually happened.</div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    {% include logo-mark.html %}
+    <blockquote>One market.<br>Many angles.</blockquote>
+    <cite>{{ site.universities_count }} universities and counting</cite>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="split" data-reveal>
+      <div>
+        <p class="eyebrow">Who writes it</p>
+        <h2>{{ site.universities_count }} universities, {{ site.sectors | size }} sectors, {{ site.contributors_count }} contributors.</h2>
+        <p class="lede">Chemical engineers on chemicals. Aeronautical engineers on aerospace. Biochemists on biotech. Economists on rates. Each desk is staffed by people who study the thing the sector is made of.</p>
+        <p style="margin-top:1.4rem"><a class="arrow-link" href="{{ '/team/' | relative_url }}">Meet the team</a></p>
+      </div>
+      <div>
+        <ul class="checks" style="margin-top:0">
+          {%- for u in site.data.team.universities -%}<li class="ok">{{ u }}</li>{%- endfor -%}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

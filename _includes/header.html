@@ -1,0 +1,21 @@
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Meridian62 home">
+      {% include logo-mark.html %}
+      <span class="brand__word">Meridian<small>Sixty-Two</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+    <nav class="nav" id="nav">
+      {%- assign items = "Sectors|/sectors/,Quarterly|/quarterly/,Decoded|/glossary/,Schedule|/schedule/,About|/about/,Team|/team/,Join|/join/" | split: "," -%}
+      {%- for item in items -%}
+        {%- assign parts = item | split: "|" -%}
+        {%- assign href = parts[1] -%}
+        {%- if page.url == href or page.url contains href and href != "/" -%}
+          <a href="{{ href | relative_url }}" aria-current="page">{{ parts[0] }}</a>
+        {%- else -%}
+          <a href="{{ href | relative_url }}">{{ parts[0] }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+  </div>
+</header>

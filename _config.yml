@@ -1,0 +1,76 @@
+# =============================================================
+#  MERIDIAN62 — SITE SETTINGS
+#  This is the only settings file. Edit the values after the colon.
+#  Keep the quotes where they already exist.
+# =============================================================
+
+title: "Meridian62"
+tagline: "Markets · From every angle"
+slogan: "Built by Students. Made for Everyone."
+description: "Meridian62 is a weekly market publication written by students across universities, degrees and countries. One market. Many angles."
+
+# The web address of the site (no slash at the end).
+# If your repository is called  meridian62.github.io  leave baseurl empty ("").
+# If your repository has a different name, e.g. "site", set  baseurl: "/site"
+url: "https://meridian62.github.io"
+baseurl: ""
+
+# Your GitHub repository, used by the Editors' tools page to build "open this file" links.
+# Format:  username/repository
+github_repo: "meridian62/meridian62.github.io"
+
+# Contact and social. Leave a value empty ("") to hide that link on the site.
+contact_email: "hello@meridian62.com"
+linkedin_url: ""
+instagram_url: ""
+tiktok_url: ""
+
+# First Monday the weekly notes go live. Used for the "first release" message before launch.
+first_release: 2026-09-28
+
+# Headline numbers shown on the homepage and About page. Update as the team grows.
+universities_count: "15"
+contributors_count: "40+"
+
+# Where the publication is run from (shown in the footer).
+based_in: "London · Vienna"
+
+# ----------------------------------------------------------------
+#  Technical settings — you should not need to change anything below.
+# ----------------------------------------------------------------
+timezone: Europe/London
+permalink: pretty
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+collections:
+  sectors:
+    output: true
+    permalink: /sectors/:slug/
+  notes:
+    output: false
+  recaps:
+    output: true
+    permalink: /quarterly/:slug/
+
+defaults:
+  - scope: { path: "", type: "sectors" }
+    values: { layout: "sector" }
+  - scope: { path: "", type: "recaps" }
+    values: { layout: "recap" }
+  - scope: { path: "" }
+    values: { layout: "default" }
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - "*.sh"

@@ -1,0 +1,92 @@
+---
+layout: default
+---
+{%- assign s = page -%}
+{%- assign notes = site.notes | where: "sector", s.slug | where_exp: "n", "n.published != false" | sort: "week" | reverse -%}
+<section class="page-hero">
+  <div class="wrap">
+    <div class="split" style="align-items:center">
+      <div>
+        <p class="eyebrow">Sector desk · Publishes in week {{ s.rota_group }} of the cycle</p>
+        <div class="page-hero__num">{{ s.number }}</div>
+        <h1>{{ s.name }}</h1>
+        <p class="lede">{{ s.covers }}</p>
+      </div>
+      {% if s.image and s.image != "" %}
+      <div class="poster" data-enter="2"><img src="{{ s.image | relative_url }}" alt="{{ s.name }} — Meridian62 sector poster" loading="eager"></div>
+      {% else %}
+      <div class="poster poster--empty" aria-hidden="true">{% include logo-mark.html %}<span>{{ s.number }}</span></div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="desk" data-reveal>
+      <div class="desk__col">
+        <h3>Analysts</h3>
+        {%- assign has_analyst = false -%}
+        {%- for a in s.analysts -%}{%- if a.name != "" -%}{%- assign has_analyst = true -%}
+        <div class="analyst">
+          <span class="analyst__name">{{ a.name }}</span>
+          {%- if a.degree != "" or a.university != "" -%}
+          <span class="analyst__meta">{{ a.degree }}{% if a.degree != "" and a.university != "" %} · {% endif %}{{ a.university }}</span>
+          {%- endif -%}
+        </div>
+        {%- endif -%}{%- endfor -%}
+        {%- unless has_analyst -%}<p class="empty">Desk being staffed</p>{%- endunless -%}
+      </div>
+      <div class="desk__col">
+        <h3>Equities covered this term</h3>
+        {%- assign has_eq = false -%}
+        {%- for e in s.equities -%}{%- if e.company != "" -%}{%- assign has_eq = true -%}
+        <div class="equity">
+          <span class="equity__ticker">{{ e.ticker }}</span>
+          <span class="equity__name">{{ e.company }}</span>
+          {%- if e.watching and e.watching != "" -%}<span class="equity__watch">Watching: {{ e.watching }}</span>{%- endif -%}
+        </div>
+        {%- endif -%}{%- endfor -%}
+        {%- unless has_eq -%}<p class="empty">Coverage list being finalised — announced with the first release</p>{%- endunless -%}
+      </div>
+    </div>
+    {% if content and content != "" %}<div class="prose" style="margin-top:2.4rem" data-reveal>{{ content }}</div>{% endif %}
+  </div>
+</section>
+
+<section class="section" id="notes">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <div>
+        <p class="eyebrow">Weekly notes</p>
+        <h2>{% if notes.size > 0 %}{{ notes.size }} note{% if notes.size != 1 %}s{% endif %} on the record{% else %}The desk opens soon{% endif %}</h2>
+      </div>
+      <a class="arrow-link" href="{{ '/schedule/' | relative_url }}">When this desk publishes</a>
+    </div>
+    {%- if notes.size > 0 -%}
+      {%- for n in notes -%}
+        {% include note.html note=n sector=s %}
+      {%- endfor -%}
+    {%- else -%}
+      <div class="callout" data-reveal>
+        <b>Nothing published yet</b>
+        This desk's first note publishes on the first Monday of its cycle week. Every note is 250–400 words on one of the equities above, sourced from the company's own announcements and written so that anyone can read it.
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="split" data-reveal>
+      <div>
+        <p class="eyebrow">More desks</p>
+        <h3>Eleven sectors. One market.</h3>
+      </div>
+      <div class="btn-row" style="align-self:center;justify-content:flex-end">
+        <a class="btn btn--ghost" href="{{ '/sectors/' | relative_url }}">All sectors</a>
+        <a class="btn" href="{{ '/glossary/' | relative_url }}">Decoded · Glossary</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+---
+layout: default
+title: Quarterly Market Recap
+eyebrow: The long read
+lede: Four times a year, the recap team turns twelve weeks of desk coverage into one piece that says what actually happened — and what connected it.
+description: The Meridian62 Quarterly Market Recap — a long-form review of the quarter built from the weekly sector notes.
+permalink: /quarterly/
+---
+{%- assign recaps = site.recaps | sort: "date" | reverse -%}
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    {%- if recaps.size > 0 -%}
+    <div class="latest" data-reveal-stagger>
+      {%- for r in recaps -%}
+      <a class="latest__item" href="{{ r.url | relative_url }}">
+        <div class="note__meta"><span><b>{{ r.quarter }}</b></span><span>Published {{ r.date | date: "%-d %B %Y" }}</span></div>
+        <h3>{{ r.title }}</h3>
+        <p>{{ r.lede | default: r.content | strip_html | truncatewords: 40 }}</p>
+        <span class="arrow-link">Read the recap</span>
+      </a>
+      {%- endfor -%}
+    </div>
+    {%- else -%}
+    <div class="callout" data-reveal>
+      <b>First recap · Autumn 2026</b>
+      The first Quarterly Market Recap covers the twelve publishing weeks from 28 September to 14 December 2026 and is scheduled for Monday 11 January 2027. It is written from the desks' own notes, so the weekly coverage is the place to start.
+    </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="split" data-reveal>
+      <div>
+        <p class="eyebrow">The team</p>
+        <h2>Wide, not deep.</h2>
+        <p class="lede">Weekly analysts go deep on a few names. The recap team goes wide and looks for what connects them — the three or four threads that ran through a whole quarter of notes.</p>
+      </div>
+      <div class="people">
+        {%- for p in site.data.team.quarterly -%}{%- if p.name != "" -%}
+        <div class="person">
+          <div class="person__role">Quarterly Recap</div>
+          <div class="person__name">{{ p.name }}</div>
+          {%- if p.degree != "" or p.university != "" -%}<div class="person__meta">{{ p.degree }}{% if p.degree != "" and p.university != "" %} · {% endif %}{{ p.university }}</div>{%- endif -%}
+        </div>
+        {%- endif -%}{%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top:0">
+  <div class="wrap">
+    <div class="principles" data-reveal-stagger>
+      <div class="principle"><div><h3>Built from the notes</h3><p>The recap starts from what the desks published, not from a blank page. Every theme it names should be traceable to specific weekly notes.</p></div></div>
+      <div class="principle"><div><h3>Around 2,000 words</h3><p>Long enough to connect eleven sectors, short enough to be read in one sitting. Structure: what happened, the three to four threads that ran through it, what to watch next quarter.</p></div></div>
+      <div class="principle"><div><h3>Still plain English</h3><p>The same rule as every note: someone outside finance should be able to read it start to finish. Every specialist term goes to <a href="{{ '/glossary/' | relative_url }}" style="color:var(--gold)">Decoded</a>.</p></div></div>
+    </div>
+  </div>
+</section>
