@@ -10,14 +10,14 @@ rota_group: A          # A, B or C — which week of the 3-week cycle this desk 
 image: ""      # optional cover image, e.g. /assets/img/sectors/07.jpg
 
 analysts:
-  - name: "Marianne"
-    degree: ""
-    university: ""
-  - name: "Sveva"
-    degree: ""
-    university: ""
-  - name: "Maya"
-    degree: ""
+  - name: "Marianne Fayad"
+    degree: "MEng Biomedical Engineering"
+    university: "Imperial College London"
+  - name: "Sveva Romano"
+    degree: "BSc Medical Biochemistry"
+    university: "Imperial College London"
+  - name: "Maya Halawi"
+    degree: "MEng Biomedical Engineering"
     university: "Imperial College London"
 
 # 3–5 companies the desk follows all term. 'watching' is the one-sentence coverage line:
