@@ -7,7 +7,7 @@ slug: financials-banks
 name: "Financials & Banks"
 covers: "Bank earnings, lending growth, credit quality and deposit costs."
 rota_group: B          # A, B or C — which week of the 3-week cycle this desk publishes
-image: ""      # optional cover image, e.g. /assets/img/sectors/08.jpg
+image: "/assets/img/sectors/08.jpg"
 
 analysts:
   - name: "Adrian Nikolai Scheidler"
