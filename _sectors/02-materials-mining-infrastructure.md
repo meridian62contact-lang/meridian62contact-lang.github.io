@@ -7,7 +7,7 @@ slug: materials-mining-infrastructure
 name: "Materials, Mining & Infrastructure"
 covers: "Metals, mining, refining capacity, construction and infrastructure build-out."
 rota_group: B          # A, B or C — which week of the 3-week cycle this desk publishes
-image: ""      # optional cover image, e.g. /assets/img/sectors/02.jpg
+image: "/assets/img/sectors/02.jpg"
 
 analysts:
   - name: "Hector Nouailhetas"
