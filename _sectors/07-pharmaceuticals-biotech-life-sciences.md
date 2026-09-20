@@ -7,7 +7,7 @@ slug: pharmaceuticals-biotech-life-sciences
 name: "Pharmaceuticals, Biotech & Life Sciences"
 covers: "The companies developing drugs, therapies and biological technologies: pipelines, clinical trials, biologics, gene therapies and regulatory approvals."
 rota_group: A          # A, B or C — which week of the 3-week cycle this desk publishes
-image: ""      # optional cover image, e.g. /assets/img/sectors/07.jpg
+image: "/assets/img/sectors/07.jpg"
 
 analysts:
   - name: "Marianne Fayad"
