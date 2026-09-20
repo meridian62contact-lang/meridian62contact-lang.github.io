@@ -13,7 +13,7 @@ analysts:
   - name: "Kate Akl"
     degree: "MEng Biomedical Engineering"
     university: "Imperial College London"
-    - name: "Marianne Fayad"
+  - name: "Marianne Fayad"
     degree: "MEng Biomedical Engineering"
     university: "Imperial College London"
   - name: "Maya Halawi"
