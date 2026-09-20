@@ -16,7 +16,7 @@ analysts:
     - name: "Carlota Guillamet de Gracia"
     degree: "BSc Medical Biosciences"
     university: "Imperial College London"
-  - name: "Lola Theato"
+    - name: "Lola Theato"
     degree: "BSc Medical Biosciences"
     university: "Imperial College London"
 
