@@ -20,20 +20,20 @@ baseurl: ""
 github_repo: "meridian62/meridian62.github.io"
 
 # Contact and social. Leave a value empty ("") to hide that link on the site.
-contact_email: "hello@meridian62.com"
-linkedin_url: ""
-instagram_url: ""
+contact_email: "meridian62.contact@gmail.com"
+linkedin_url: "https://www.linkedin.com/company/meridian62/"
+instagram_url: "https://www.instagram.com/meridian.62/"
 tiktok_url: ""
 
 # First Monday the weekly notes go live. Used for the "first release" message before launch.
-first_release: 2026-09-28
+first_release: Coming Soon
 
 # Headline numbers shown on the homepage and About page. Update as the team grows.
 universities_count: "15"
 contributors_count: "40+"
 
 # Where the publication is run from (shown in the footer).
-based_in: "London · Vienna"
+based: "Internationally"
 
 # ----------------------------------------------------------------
 #  Technical settings — you should not need to change anything below.
