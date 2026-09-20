@@ -7,7 +7,7 @@ slug: energy-utilities
 name: "Energy & Utilities"
 covers: "Oil and gas, power generation, grid operators and the renewables build-out."
 rota_group: A          # A, B or C — which week of the 3-week cycle this desk publishes
-image: ""      # optional cover image, e.g. /assets/img/sectors/01.jpg
+image: "/assets/img/sectors/01.jpg"
 
 analysts:
   - name: "Amelia Baillie"
