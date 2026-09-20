@@ -7,7 +7,7 @@ slug: technology-semiconductors
 name: "Technology & Semiconductors"
 covers: "Fabs, advanced packaging, export controls and data-centre hardware."
 rota_group: B          # A, B or C — which week of the 3-week cycle this desk publishes
-image: "/assets/img/sectors/05.jpg"      # optional cover image, e.g. /assets/img/sectors/05.jpg
+image: "/assets/img/sectors/05.jpg"
 
 analysts:
   - name: "Youssef Berrachid"
