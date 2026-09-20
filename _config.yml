@@ -12,7 +12,7 @@ description: "Meridian62 is a weekly market publication written by students acro
 # The web address of the site (no slash at the end).
 # If your repository is called  meridian62.github.io  leave baseurl empty ("").
 # If your repository has a different name, e.g. "site", set  baseurl: "/site"
-url: "https://meridian62.github.io"
+url: "https://www.meridian62.com"
 baseurl: ""
 
 # Your GitHub repository, used by the Editors' tools page to build "open this file" links.
