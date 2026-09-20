@@ -7,7 +7,7 @@ slug: industrials-capital-goods-transport
 name: "Industrials, Capital Goods & Transport"
 covers: "Machinery, automation, factory equipment, shipping, rail and logistics."
 rota_group: A          # A, B or C — which week of the 3-week cycle this desk publishes
-image: ""      # optional cover image, e.g. /assets/img/sectors/04.jpg
+image: "/assets/img/sectors/04.jpg"
 
 analysts:
   - name: "Sophia Zampolli"
