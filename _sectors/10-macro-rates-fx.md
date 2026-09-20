@@ -7,7 +7,7 @@ slug: macro-rates-fx
 name: "Macro, Rates & FX"
 covers: "Central bank decisions, the yield curve, currency moves and inflation."
 rota_group: A          # A, B or C — which week of the 3-week cycle this desk publishes
-image: ""      # optional cover image, e.g. /assets/img/sectors/10.jpg
+image: "/assets/img/sectors/10.jpg"
 
 analysts:
   - name: "Adrian Nikolai Scheidler"
