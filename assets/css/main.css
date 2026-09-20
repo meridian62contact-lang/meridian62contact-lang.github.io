@@ -124,7 +124,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 
 /* ---------- hero ---------- */
 .hero{
-  min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;padding:96px 0 72px;
+   height:100svh;display:grid;place-items:center;text-align:center;position:relative;padding:96px 0 72px;
   background:
     radial-gradient(ellipse 60% 50% at 50% 42%, rgba(16,32,58,.9), transparent 70%),
     radial-gradient(ellipse 120% 80% at 50% 110%, rgba(201,164,92,.10), transparent 60%),
