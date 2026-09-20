@@ -142,7 +142,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .hero__line{font-family:var(--display);font-size:clamp(1.5rem,3.2vw,2.6rem);line-height:1.25;margin:0 auto 1.2rem;max-width:22ch}
 .hero__lede{color:var(--ink-2);max-width:56ch;margin:0 auto 1.8rem;font-size:clamp(1rem,1.4vw,1.15rem)}
 .hero .btn-row{justify-content:center}
-.hero__scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero__scroll{position:absolute;bottom:56px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px}
 .hero__scroll::after{content:"";width:1px;height:44px;background:linear-gradient(var(--gold),transparent);animation:drop 2.4s var(--ease) infinite}
 @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
