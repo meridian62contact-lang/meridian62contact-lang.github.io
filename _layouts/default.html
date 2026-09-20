@@ -1,6 +1,43 @@
 <!doctype html>
 <html lang="en">
-{% include head.html %}
+{% include footer.html %}
+<div class="subscribe-popup" id="subscribePopup">
+  <button type="button" class="subscribe-popup__close" id="subscribeClose" aria-label="Close">✕</button>
+  <div id="subscribeFormWrap">
+    <h4>Get the weekly round-up</h4>
+    <p>One email a week when new coverage goes live. No spam, unsubscribe any time.</p>
+    <form id="subscribeForm">
+      <input type="email" id="subscribeEmail" placeholder="you@email.com" required>
+      <button class="btn" type="submit">Join</button>
+    </form>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY = "m62_subscribe_done";
+  if (localStorage.getItem(KEY)) return;
+  var popup = document.getElementById("subscribePopup");
+  setTimeout(function(){ popup.classList.add("is-visible"); }, 2000);
+
+  document.getElementById("subscribeClose").addEventListener("click", function(){
+    popup.classList.remove("is-visible");
+    localStorage.setItem(KEY, "1");
+  });
+
+  document.getElementById("subscribeForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var email = document.getElementById("subscribeEmail").value;
+    fetch("https://script.google.com/macros/s/AKfycbyx1sTQi2Uvnrd5YYhIh1HlvYkABjaQXgBVCNps25t3Jxw-K0mDIGYU-wK7MUGj8ExnDA/exec", {
+      method: "POST",
+      mode: "no-cors",
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      body: "email=" + encodeURIComponent(email)
+    });
+    document.getElementById("subscribeFormWrap").innerHTML = "<p class='subscribe-popup__thanks'>You're on the list — thank you.</p>";
+    localStorage.setItem(KEY, "1");
+  });
+})();
+</script>
 <body class="{{ page.body_class }}">
 {% include header.html %}
 <main id="main">
