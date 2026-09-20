@@ -13,6 +13,12 @@ analysts:
   - name: "Kate Akl"
     degree: "MEng Biomedical Engineering"
     university: "Imperial College London"
+    - name: "Marianne Fayad"
+    degree: "MEng Biomedical Engineering"
+    university: "Imperial College London"
+  - name: "Maya Halawi"
+    degree: "MEng Biomedical Engineering"
+    university: "Imperial College London"
   
 
 # 3–5 companies the desk follows all term. 'watching' is the one-sentence coverage line:
