@@ -10,13 +10,13 @@ rota_group: A          # A, B or C — which week of the 3-week cycle this desk 
 image: "/assets/img/sectors/07.jpg"
 
 analysts:
-    - name: "Sveva Romano"
+  - name: "Sveva Romano"
     degree: "BSc Medical Biochemistry"
     university: "Imperial College London"
-    - name: "Carlota Guillamet de Gracia"
+  - name: "Carlota Guillamet de Gracia"
     degree: "BSc Medical Biosciences"
     university: "Imperial College London"
-    - name: "Lola Theato"
+  - name: "Lola Theato"
     degree: "BSc Medical Biosciences"
     university: "Imperial College London"
 
