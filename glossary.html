@@ -44,7 +44,19 @@ permalink: /glossary/
       <p class="eyebrow eyebrow--center">Why a glossary</p>
       <h2>Nobody should need a finance degree to read the news.</h2>
       <p>Every desk lists the specialist terms it used, and the editors add them here with a definition an ordinary reader can use. If a word in a note still isn't clear, tell us — that is a mistake we want to fix.</p>
-      {% if site.contact_email != "" %}<a class="btn" href="mailto:{{ site.contact_email }}?subject=Decoded%20—%20a%20term%20I%20did%20not%20understand">Suggest a term</a>{% endif %}
+      <form class="form" style="max-width:420px;margin:0 auto;text-align:left" action="https://formsubmit.co/meridian62.contact@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="Decoded — a term suggestion">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="https://www.meridian62.com/glossary/?sent=true">
+  <input type="text" name="_honey" style="display:none">
+  <label>Term</label>
+  <input type="text" name="Term" placeholder="e.g. Book-to-bill" required>
+  <label>Where you saw it <small>Optional — which note or sector, if you remember</small></label>
+  <input type="text" name="Where you saw it">
+  <label>Your email <small>Optional — only if you'd like a reply</small></label>
+  <input type="email" name="Your email">
+  <button class="btn" type="submit" style="margin-top:1.3rem">Send suggestion</button>
+</form>
     </div>
   </div>
 </section>
