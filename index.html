@@ -95,7 +95,7 @@ body_class: home
     <div class="section__head" data-reveal>
       <div>
         <p class="eyebrow">{% if latest_week != "" %}Latest release · Week of {{ all_notes[0].week | date: "%-d %B %Y" }}{% else %}Latest release{% endif %}</p>
-        <h2>{% if latest_week != "" %}This week's notes{% else %}First release: Monday {{ site.first_release | date: "%-d %B %Y" }}{% endif %}</h2>
+       <h2>{% if latest_week != "" %}This week's notes{% else %}Coming soon{% endif %}</h2>
       </div>
       <a class="arrow-link" href="{{ '/schedule/' | relative_url }}">Publishing schedule</a>
     </div>
@@ -116,9 +116,9 @@ body_class: home
     </div>
     {%- else -%}
     <div class="callout" data-reveal>
-      <b>Launching September 2026</b>
-      The desks are choosing the companies they will follow this term. The first notes go live on Monday {{ site.first_release | date: "%-d %B %Y" }}, and from then on a few desks publish every Monday morning on a fixed rota. Until then, read <a href="{{ '/about/' | relative_url }}" style="color:var(--gold)">what we are</a> and meet <a href="{{ '/team/' | relative_url }}" style="color:var(--gold)">the team</a>.
-    </div>
+  <b>Coming soon</b>
+  The desks are choosing the companies they will follow this term. The first notes go live soon, and from then on a few desks publish every Monday morning on a fixed rota. Until then, read <a href="{{ '/about/' | relative_url }}" style="color:var(--gold)">what we are</a> and meet <a href="{{ '/team/' | relative_url }}" style="color:var(--gold)">the team</a>.
+</div>
     {%- endif -%}
   </div>
 </section>
