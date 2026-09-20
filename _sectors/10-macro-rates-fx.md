@@ -10,15 +10,15 @@ rota_group: A          # A, B or C — which week of the 3-week cycle this desk 
 image: ""      # optional cover image, e.g. /assets/img/sectors/10.jpg
 
 analysts:
-  - name: "Adrian"
-    degree: ""
-    university: ""
-  - name: "Hannah"
-    degree: ""
-    university: ""
-  - name: "Valeria"
-    degree: ""
-    university: ""
+  - name: "Adrian Nikolai Scheidler"
+    degree: "BA Finance and Business Administration"
+    university: "Regent's University London"
+  - name: "Hannah Khalique"
+    degree: "BSc Economics, Finance and Data Science"
+    university: "Imperial College London"
+  - name: "Valeria Batsouli"
+    degree: "BSc Medical Biosciences"
+    university: "Imperial College London"
 
 # 3–5 companies the desk follows all term. 'watching' is the one-sentence coverage line:
 # the specific thing the desk is watching right now (update it whenever it changes).
