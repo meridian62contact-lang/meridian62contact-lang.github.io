@@ -27,10 +27,12 @@ permalink: /glossary/
         {%- assign current = f -%}
         <h2 class="glossary-letter" id="letter-{{ f }}">{{ f }}</h2>
       {%- endif -%}
-      <dl class="term">
+           <dl class="term">
         <dt>{{ t.term }}</dt>
         <dd>{{ t.definition }}
-          {%- if t.sector and t.sector != "" -%}{%- assign s = sectors | where: "slug", t.sector | first -%}{%- if s %}<div class="small">From the <a href="{{ s.url | relative_url }}" style="color:var(--gold)">{{ s.name }}</a> desk</div>{% endif -%}{%- endif -%}
+          {%- assign s = nil -%}
+          {%- if t.sector and t.sector != "" -%}{%- assign s = sectors | where: "slug", t.sector | first -%}{%- endif -%}
+          {%- if s %}<div class="small">From the <a href="{{ s.url | relative_url }}" style="color:var(--gold)">{{ s.name }}</a> desk</div>{% else %}<div class="small">Widely used</div>{% endif -%}
         </dd>
       </dl>
     {%- endfor -%}
