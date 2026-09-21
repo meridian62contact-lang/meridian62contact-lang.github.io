@@ -27,3 +27,385 @@
 - term: "Yield curve"
   definition: "A line showing the interest rate a government pays to borrow for different lengths of time, from a few months to thirty years. Its shape is read as a signal about the economy."
   sector: "macro-rates-fx"
+
+# ---------- General markets & valuation ----------
+
+- term: "Market capitalisation"
+  definition: "The total value of a company's shares — its share price multiplied by the number of shares it has issued. Often shortened to 'market cap'."
+  sector: ""
+
+- term: "Enterprise value"
+  definition: "What it would cost to buy an entire company outright: its market capitalisation plus its debt, minus its cash. Used instead of market cap when comparing companies with different amounts of debt."
+  sector: ""
+
+- term: "Price-to-earnings ratio"
+  definition: "A company's share price divided by its profit per share. A P/E of 20 means investors are paying £20 for every £1 of annual profit the company makes."
+  sector: ""
+
+- term: "Earnings per share"
+  definition: "A company's total profit divided by the number of shares it has issued. Often shortened to 'EPS'."
+  sector: ""
+
+- term: "Dividend"
+  definition: "A cash payment a company makes to its shareholders out of its profits, usually every three or six months."
+  sector: ""
+
+- term: "Dividend yield"
+  definition: "A company's annual dividend divided by its current share price, shown as a percentage. A £100 share paying a £3 annual dividend has a 3% yield."
+  sector: ""
+
+- term: "Share buyback"
+  definition: "When a company uses its own cash to buy back its own shares, reducing the number left in circulation so each remaining share represents a slightly bigger slice of the company."
+  sector: ""
+
+- term: "Free cash flow"
+  definition: "The cash a company has left after paying for its running costs and its investment in equipment and infrastructure — the cash it is genuinely free to spend on dividends, buybacks or debt repayment."
+  sector: ""
+
+- term: "EBITDA"
+  definition: "A company's profit before interest, tax, depreciation and amortisation are subtracted — a rough measure of how much cash the underlying business generates before accounting and financing choices are factored in."
+  sector: ""
+
+- term: "Gross margin"
+  definition: "The percentage of revenue left after subtracting the direct cost of making a product or providing a service, before other costs like marketing or admin are taken out."
+  sector: ""
+
+- term: "Operating margin"
+  definition: "The percentage of revenue left as profit after all the costs of running the business — production, staff, marketing, admin — but before interest and tax."
+  sector: ""
+
+- term: "Net margin"
+  definition: "The percentage of revenue that ends up as final profit after every cost, including interest and tax, has been subtracted."
+  sector: ""
+
+- term: "Revenue"
+  definition: "The total amount of money a company brings in from selling its products or services, before any costs are subtracted. Also called 'sales' or 'turnover'."
+  sector: ""
+
+- term: "Consensus estimate"
+  definition: "The average forecast for a company's results, calculated across all the analysts who cover it. A 'beat' means the company did better than this average; a 'miss' means it did worse."
+  sector: ""
+
+- term: "Valuation multiple"
+  definition: "A shorthand way of pricing a company by comparing one financial figure — like profit or revenue — to its overall value, so different-sized companies can be compared on equal terms."
+  sector: ""
+
+- term: "Bull market"
+  definition: "A sustained period in which prices are rising and investor confidence is high, typically referring to shares, a sector, or the market as a whole."
+  sector: ""
+
+- term: "Bear market"
+  definition: "A sustained period, usually defined as a fall of 20% or more from a recent high, in which prices are falling and investor confidence is low."
+  sector: ""
+
+- term: "Volatility"
+  definition: "How much and how quickly a price moves up and down over time. A highly volatile share can swing sharply in a single day; a low-volatility one moves gradually."
+  sector: ""
+
+- term: "Liquidity"
+  definition: "How easily an asset can be bought or sold without significantly moving its price. A share that trades constantly in large volumes is highly liquid; one that rarely trades is not."
+  sector: ""
+
+- term: "Short selling"
+  definition: "Borrowing shares to sell them now, hoping to buy them back later at a lower price and pocket the difference — a way of profiting if a share price falls rather than rises."
+  sector: ""
+
+- term: "Hedge"
+  definition: "An investment or strategy taken on specifically to offset the risk of another investment, so a loss in one is cushioned by a gain in the other."
+  sector: ""
+
+- term: "Diversification"
+  definition: "Spreading investments across different companies, sectors or asset types so that a problem in any single one does not sink the whole portfolio."
+  sector: ""
+
+- term: "Index"
+  definition: "A basket of shares, such as the FTSE 100 or S&P 500, tracked together as a single number so investors can follow how a market or sector is performing as a whole."
+  sector: ""
+
+- term: "Benchmark"
+  definition: "A standard, usually an index or interest rate, that an investment or company's performance is measured against to judge whether it is doing well or badly."
+  sector: ""
+
+- term: "Initial public offering"
+  definition: "The first time a company sells its shares to the public and lists on a stock exchange. Often shortened to 'IPO'."
+  sector: ""
+
+- term: "10-K"
+  definition: "A detailed annual report that US public companies are legally required to file, covering their full financial results, risks and business operations for the year."
+  sector: ""
+
+- term: "10-Q"
+  definition: "A detailed report that US public companies are legally required to file every quarter, covering their financial results for that three-month period."
+  sector: ""
+
+- term: "Prospectus"
+  definition: "A legal document a company publishes when it lists on a stock exchange or raises money, setting out its business, finances and the risks of investing in it."
+  sector: ""
+
+- term: "Capital markets day"
+  definition: "An event where a company's management presents its strategy and financial targets directly to investors and analysts, usually in more depth than a normal results announcement."
+  sector: ""
+
+- term: "Sell-side analyst"
+  definition: "An analyst working for a bank or brokerage who publishes research and ratings on companies for their clients to trade on, as opposed to a 'buy-side' analyst who invests a fund's own money."
+  sector: ""
+
+- term: "Price target"
+  definition: "An analyst's forecast of what a company's share price will be at a set point in the future, usually twelve months out."
+  sector: ""
+
+- term: "Market maker"
+  definition: "A firm that continuously offers to buy and sell a particular share, keeping the market liquid so other investors can trade it easily at any time."
+  sector: ""
+
+# ---------- Macro, Rates & FX ----------
+
+- term: "Inflation"
+  definition: "The rate at which prices for goods and services rise over time, eroding how much a fixed amount of money can buy."
+  sector: "macro-rates-fx"
+
+- term: "Interest rate"
+  definition: "The cost of borrowing money, or the reward for saving it, expressed as a percentage of the amount over a year."
+  sector: "macro-rates-fx"
+
+- term: "Central bank"
+  definition: "A country's official institution responsible for controlling its money supply and interest rates, such as the Bank of England, the European Central Bank or the US Federal Reserve."
+  sector: "macro-rates-fx"
+
+- term: "Federal Reserve"
+  definition: "The central bank of the United States, often just called 'the Fed', which sets US interest rates and oversees the American banking system."
+  sector: "macro-rates-fx"
+
+- term: "Recession"
+  definition: "A period, commonly defined as two consecutive quarters, in which a country's economy shrinks rather than grows."
+  sector: "macro-rates-fx"
+
+- term: "Gross domestic product"
+  definition: "The total value of everything a country produces in a given period — the standard measure of the size of an economy. Often shortened to 'GDP'."
+  sector: "macro-rates-fx"
+
+- term: "Quantitative easing"
+  definition: "A central bank creating new money to buy bonds, aiming to push interest rates down and encourage borrowing and spending when the economy needs support."
+  sector: "macro-rates-fx"
+
+- term: "Bond"
+  definition: "A loan an investor makes to a government or company, which pays the investor regular interest and repays the original amount on a set future date."
+  sector: "macro-rates-fx"
+
+- term: "Bond yield"
+  definition: "The return an investor earns on a bond each year, expressed as a percentage of what they paid for it. Bond prices and yields move in opposite directions."
+  sector: "macro-rates-fx"
+
+- term: "Credit rating"
+  definition: "A score, given by agencies like Moody's or S&P, that estimates how likely a government or company is to repay its debts — a higher rating means it can typically borrow more cheaply."
+  sector: "macro-rates-fx"
+
+- term: "Sovereign debt"
+  definition: "Money borrowed by a national government, usually by issuing bonds that investors buy."
+  sector: "macro-rates-fx"
+
+- term: "Exchange rate"
+  definition: "The price of one currency in terms of another — how many dollars, for example, it takes to buy one pound."
+  sector: "macro-rates-fx"
+
+- term: "Currency peg"
+  definition: "A policy where a country fixes its exchange rate to another currency, such as the US dollar, rather than letting it float freely on the open market."
+  sector: "macro-rates-fx"
+
+- term: "Trade deficit"
+  definition: "The amount by which a country's imports exceed its exports over a given period — it is buying more from the rest of the world than it is selling."
+  sector: "macro-rates-fx"
+
+- term: "Consumer price index"
+  definition: "A measure of inflation that tracks the average change in prices for a fixed basket of everyday goods and services. Often shortened to 'CPI'."
+  sector: "macro-rates-fx"
+
+# ---------- Financials & Banks ----------
+
+- term: "Net interest margin"
+  definition: "The difference between the interest a bank earns on loans and the interest it pays out on deposits, shown as a percentage of its lending assets — one of the main measures of a bank's profitability."
+  sector: "financials-banks"
+
+- term: "Loan loss provision"
+  definition: "Money a bank sets aside in advance to cover loans it expects some borrowers will fail to repay."
+  sector: "financials-banks"
+
+- term: "Tier 1 capital"
+  definition: "A bank's core financial cushion — mainly shareholder equity and retained profits — that regulators require it to hold to absorb losses before it becomes a risk to depositors."
+  sector: "financials-banks"
+
+- term: "Return on equity"
+  definition: "A company's profit divided by shareholder equity, shown as a percentage — a measure of how efficiently it turns shareholders' money into profit. Often shortened to 'ROE'."
+  sector: "financials-banks"
+
+- term: "Assets under management"
+  definition: "The total value of the money and investments a bank, fund or wealth manager looks after on behalf of its clients. Often shortened to 'AUM'."
+  sector: "financials-banks"
+
+- term: "Underwriting"
+  definition: "A bank agreeing to buy and take on the risk of shares or bonds being issued, guaranteeing the company raising money that the deal will go through even if not enough outside investors turn up."
+  sector: "financials-banks"
+
+- term: "Leverage"
+  definition: "The use of borrowed money to fund an investment or a company's operations. Higher leverage magnifies both potential gains and potential losses."
+  sector: "financials-banks"
+
+- term: "Non-performing loan"
+  definition: "A loan on which the borrower has stopped making the required payments, usually for 90 days or more, signalling it may not be fully repaid."
+  sector: "financials-banks"
+
+# ---------- Industrials, Capital Goods & Transport ----------
+
+- term: "Capital expenditure"
+  definition: "Money a company spends on long-term physical assets, such as factories, machinery or vehicles, rather than on its day-to-day running costs. Often shortened to 'capex'."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Supply chain"
+  definition: "The full network of suppliers, factories and transport a company relies on to turn raw materials into a finished product on a customer's doorstep."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Lead time"
+  definition: "The length of time between a customer placing an order and actually receiving it. Long lead times are often a sign that demand is outstripping a company's ability to produce."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Capacity utilisation"
+  definition: "The percentage of a factory or plant's maximum possible output that it is actually producing. Running near 100% signals a company may struggle to meet extra demand without new investment."
+  sector: "industrials-capital-goods-transport"
+
+# ---------- Technology & Semiconductors ----------
+
+- term: "Software as a service"
+  definition: "A business model where customers pay an ongoing subscription to use software hosted online, rather than buying and installing it once. Often shortened to 'SaaS'."
+  sector: "technology-semiconductors"
+
+- term: "Semiconductor"
+  definition: "A material, usually silicon, used to make the chips that power almost all modern electronics — computers, phones, cars and data centres alike. Often just called a 'chip'."
+  sector: "technology-semiconductors"
+
+- term: "Foundry"
+  definition: "A factory that manufactures chips designed by other companies, rather than designing its own — TSMC is the best-known example."
+  sector: "technology-semiconductors"
+
+- term: "Annual recurring revenue"
+  definition: "The predictable, subscription-based revenue a software company expects to receive over the next twelve months. Often shortened to 'ARR'."
+  sector: "technology-semiconductors"
+
+- term: "Churn rate"
+  definition: "The percentage of a company's customers who cancel or stop using its product over a given period — a key health measure for subscription businesses."
+  sector: "technology-semiconductors"
+
+- term: "Cloud computing"
+  definition: "Running software and storing data on remote servers accessed over the internet, rather than on a company's own physical computers."
+  sector: "technology-semiconductors"
+
+# ---------- Pharmaceuticals, Biotech & Life Sciences ----------
+
+- term: "Clinical trial"
+  definition: "A structured study testing whether a new drug or treatment is safe and effective in humans, before it can be approved for general use."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Phase III trial"
+  definition: "The final and largest stage of human testing a drug goes through before regulators will consider approving it, typically involving hundreds or thousands of patients to confirm it works and is safe."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "FDA approval"
+  definition: "Official clearance from the US Food and Drug Administration allowing a company to sell a new drug or medical product in the United States."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Patent cliff"
+  definition: "The sharp drop in sales a drugmaker faces when a blockbuster drug's patent expires and cheaper generic copies are allowed onto the market."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Generic drug"
+  definition: "A copy of a brand-name drug, sold once its patent has expired, containing the same active ingredient but usually much cheaper."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Drug pipeline"
+  definition: "The full list of treatments a pharmaceutical or biotech company currently has in development, from early research through to late-stage clinical trials."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+# ---------- Energy & Utilities ----------
+
+- term: "Barrel"
+  definition: "The standard unit oil is priced and traded in, equal to 159 litres. Oil prices are quoted as 'dollars per barrel'."
+  sector: "energy-utilities"
+
+- term: "OPEC"
+  definition: "The Organization of the Petroleum Exporting Countries, a group of major oil-producing nations that coordinates output levels to influence the global price of oil."
+  sector: "energy-utilities"
+
+- term: "Renewable energy"
+  definition: "Power generated from sources that naturally replenish, such as wind, solar and hydropower, as opposed to finite fossil fuels like coal, oil and gas."
+  sector: "energy-utilities"
+
+- term: "Grid"
+  definition: "The network of cables and infrastructure that carries electricity from power stations to homes and businesses."
+  sector: "energy-utilities"
+
+- term: "Generation capacity"
+  definition: "The maximum amount of electricity a power plant or company can produce at any one time, usually measured in megawatts or gigawatts."
+  sector: "energy-utilities"
+
+# ---------- Materials, Mining & Infrastructure ----------
+
+- term: "Commodity"
+  definition: "A raw material or basic good, such as copper, wheat or oil, that is broadly the same regardless of who produces it and is traded on that basis."
+  sector: "materials-mining-infrastructure"
+
+- term: "Spot price"
+  definition: "The current price to buy or sell a commodity immediately, as opposed to a price agreed now for delivery at a later date."
+  sector: "materials-mining-infrastructure"
+
+- term: "Futures contract"
+  definition: "An agreement to buy or sell a set amount of a commodity at a fixed price on a specific future date, used to lock in costs or prices in advance."
+  sector: "materials-mining-infrastructure"
+
+- term: "Ore grade"
+  definition: "The concentration of a valuable metal within mined rock, usually shown as a percentage. Higher-grade ore yields more metal per tonne mined."
+  sector: "materials-mining-infrastructure"
+
+# ---------- Chemicals ----------
+
+- term: "Feedstock"
+  definition: "The raw material, often oil or natural gas, that a chemical plant processes into its finished products."
+  sector: "chemicals"
+
+- term: "Margin spread"
+  definition: "The difference between the price of a chemical company's finished product and the cost of the feedstock used to make it — its core measure of profitability."
+  sector: "chemicals"
+
+- term: "Cracker"
+  definition: "An industrial plant that breaks down ('cracks') large hydrocarbon molecules from oil or gas into smaller ones, such as ethylene, used to make plastics and other chemicals."
+  sector: "chemicals"
+
+# ---------- Aerospace & Defence ----------
+
+- term: "Order book"
+  definition: "The total value of all the orders a company has secured but not yet delivered or fulfilled — closely related to backlog."
+  sector: "aerospace-defence"
+
+- term: "Contract award"
+  definition: "The formal decision by a government or customer to award a specific contract to a company, often the trigger event analysts watch most closely in defence."
+  sector: "aerospace-defence"
+
+- term: "Defence budget"
+  definition: "The total amount a government plans to spend on its military in a given year, a key driver of demand for defence contractors."
+  sector: "aerospace-defence"
+
+# ---------- Consumer, Retail & Luxury ----------
+
+- term: "Same-store sales"
+  definition: "The change in sales at a retailer's existing shops, excluding newly opened or closed locations — a way of measuring genuine growth rather than growth from simply opening more stores."
+  sector: "consumer-retail-luxury"
+
+- term: "Footfall"
+  definition: "The number of people who visit a physical shop or shopping location over a given period."
+  sector: "consumer-retail-luxury"
+
+- term: "Discretionary spending"
+  definition: "Money households spend on non-essential goods and services, such as holidays or luxury goods, which is typically the first thing cut back when budgets tighten."
+  sector: "consumer-retail-luxury"
+
+- term: "Private label"
+  definition: "Products manufactured for and sold under a retailer's own brand name, rather than a name-brand manufacturer's — usually cheaper and higher-margin for the retailer."
+  sector: "consumer-retail-luxury"
