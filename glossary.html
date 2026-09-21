@@ -19,7 +19,7 @@ permalink: /glossary/
         {%- if has -%}<a href="#letter-{{ L }}">{{ L }}</a>{%- else -%}<span>{{ L }}</span>{%- endif -%}
       {%- endfor -%}
     </nav>
-    <div data-reveal>
+        <div>
     {%- assign current = "" -%}
     {%- for t in terms -%}
       {%- assign f = t.term | slice: 0 | upcase -%}
