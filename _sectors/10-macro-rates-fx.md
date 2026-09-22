@@ -10,9 +10,6 @@ rota_group: A          # A, B or C — which week of the 3-week cycle this desk 
 image: "/assets/img/sectors/10.jpg"
 
 analysts:
-  - name: "Adrian Nikolai Scheidler"
-    degree: "BA Finance and Business Administration"
-    university: "Regent's University London"
   - name: "Hannah Khalique"
     degree: "BSc Economics, Finance and Data Science"
     university: "Imperial College London"
