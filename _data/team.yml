@@ -34,7 +34,12 @@ quarterly:
     university: "University College London"
 
 outreach:
-  - name: "Felicitas Jantsch"
+  - name: "Carlota"
+    role: "Events Manager"
+    degree: ""
+    university: ""
+  - name: "Felicitas"
+    role: "Outreach Officer"
     degree: "BSc Management"
     university: "ESCP Business School"
 
