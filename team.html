@@ -61,7 +61,7 @@ permalink: /team/
       <p>Outreach brings in the people who write it and the people who read it. Legal reviews every release for anything that could read as advice or an unsupported allegation.</p>
       <div class="people">
         {%- for p in t.outreach -%}{%- if p.name != "" -%}
-        <div class="person"><div class="person__role">Outreach Officer</div><div class="person__name">{{ p.name }}</div>{% if p.degree != "" or p.university != "" %}<div class="person__meta">{{ p.degree }}{% if p.degree != "" and p.university != "" %} · {% endif %}{{ p.university }}</div>{% endif %}</div>
+        <div class="person"><div class="person__role">{{ p.role }}</div><div class="person__name">{{ p.name }}</div>{% if p.degree != "" or p.university != "" %}<div class="person__meta">{{ p.degree }}{% if p.degree != "" and p.university != "" %} · {% endif %}{{ p.university }}</div>{% endif %}</div>
         {%- endif -%}{%- endfor -%}
         {%- for p in t.legal -%}{%- if p.name != "" -%}
         <div class="person"><div class="person__role">{{ p.role }}</div><div class="person__name">{{ p.name }}</div>{% if p.degree != "" or p.university != "" %}<div class="person__meta">{{ p.degree }}{% if p.degree != "" and p.university != "" %} · {% endif %}{{ p.university }}</div>{% endif %}</div>
