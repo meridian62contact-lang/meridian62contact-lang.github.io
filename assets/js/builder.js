@@ -58,7 +58,7 @@
       check(list, isMonday(week), week ? (isMonday(week) ? 'Week of is a Monday' : 'Week of must be a Monday (' + week + ' is not)') : 'Choose the Monday it publishes');
       check(list, !!f.company.value.trim(), 'Company named' + (f.company.value.trim() ? ': ' + equity : ''));
       check(list, headline && words(headline) <= 12, 'Headline ≤ 12 words (' + words(headline) + ')');
-      check(list, wc >= 250 && wc <= 400, 'Word count 250–400 (' + wc + ')');
+      check(list, wc >= 400 && wc <= 600, 'Word count 400–600 (' + wc + ')');
       check(list, srcs.length > 0 && srcs.every(function (x) { return x.url; }), srcs.length ? (srcs.every(function (x) { return x.url; }) ? srcs.length + ' source(s), all with links' : 'Every source needs a link starting with http') : 'At least one source');
       var hits = bannedHits(body + ' ' + headline);
       check(list, hits === 0, hits ? 'Advice language found — rephrase (buy / sell / cheap / expensive / undervalued / price target…)' : 'No advice language');
