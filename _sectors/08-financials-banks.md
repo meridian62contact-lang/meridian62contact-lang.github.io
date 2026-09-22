@@ -10,14 +10,14 @@ rota_group: B          # A, B or C — which week of the 3-week cycle this desk 
 image: "/assets/img/sectors/08.jpg"
 
 analysts:
-  - name: "Adrian Nikolai Scheidler"
-    degree: "BA Finance and Business Administration"
-    university: "Regent's University London"
   - name: "Maya Mitchkovski"
     degree: "BSc Psychological and Behavioural Science"
     university: "London School of Economics"
   - name: "Derin Seymen"
     degree: "BSc Economics, Finance and Data Science"
+    university: "Imperial College London"
+  - name: "Shrey Rawal"
+    degree: "BSc Medical Biosciences with Management"
     university: "Imperial College London"
 
 # 3–5 companies the desk follows all term. 'watching' is the one-sentence coverage line:
