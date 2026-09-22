@@ -23,6 +23,21 @@ analysts:
 # 3–5 companies the desk follows all term. 'watching' is the one-sentence coverage line:
 # the specific thing the desk is watching right now (update it whenever it changes).
 equities:
+  - company: "BASF"
+    ticker: "BAS"
+    watching: ""
+  - company: "Dow"
+    ticker: "DOW"
+    watching: ""
+  - company: "Croda"
+    ticker: "CRDA"
+    watching: ""
+  - company: "Yara"
+    ticker: "YAR"
+    watching: ""
+  - company: "LyondellBasell"
+    ticker: "LYB"
+    watching: ""
   # - company: "Company name"
   #   ticker: "TICKER"
   #   watching: "The one specific thing we are watching right now."
