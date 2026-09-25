@@ -29,7 +29,7 @@ tiktok_url: ""
 first_release: 2026-10-05
 
 # Headline numbers shown on the homepage and About page. Update as the team grows.
-universities_count: "15"
+degree_subjects_count: "23"
 contributors_count: "40+"
 
 # Where the publication is run from (shown in the footer).
