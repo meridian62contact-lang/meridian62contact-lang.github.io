@@ -69,13 +69,13 @@ permalink: /about/
     <div class="split" data-reveal>
       <div>
         <p class="eyebrow">Who writes it</p>
-        <h2>{{ site.universities_count }} universities, {{ site.sectors | size }} sectors, {{ site.contributors_count }} contributors.</h2>
+                <h2>{{ site.degree_subjects_count }} degree subjects, {{ site.sectors | size }} sectors, {{ site.contributors_count }} contributors.</h2>
         <p class="lede">Chemical engineers on chemicals. Aeronautical engineers on aerospace. Biochemists on biotech. Economists on rates. Each desk is staffed by people who study the thing the sector is made of.</p>
         <p style="margin-top:1.4rem"><a class="arrow-link" href="{{ '/team/' | relative_url }}">Meet the team</a></p>
       </div>
       <div>
         <ul class="checks" style="margin-top:0">
-          {%- for u in site.data.team.universities -%}<li class="ok">{{ u }}</li>{%- endfor -%}
+                    {%- for d in site.data.team.degree_subjects -%}<li class="ok">{{ d }}</li>{%- endfor -%}
         </ul>
       </div>
     </div>
