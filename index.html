@@ -95,7 +95,7 @@ body_class: home
     <div class="section__head" data-reveal>
       <div>
         <p class="eyebrow">{% if latest_week != "" %}Latest release · Week of {{ all_notes[0].week | date: "%-d %B %Y" }}{% else %}Latest release{% endif %}</p>
-       <h2>{% if latest_week != "" %}This week's notes{% else %}Coming soon{% endif %}</h2>
+       <h2>{% if latest_week != "" %}Learn about what's new this week{% else %}Coming soon{% endif %}</h2>
       </div>
       <a class="arrow-link" href="{{ '/schedule/' | relative_url }}">Publishing schedule</a>
     </div>
@@ -106,10 +106,15 @@ body_class: home
         {%- if w == latest_week -%}
           {%- assign s = sectors | where: "slug", n.sector | first -%}
           <a class="latest__item" href="{{ s.url | relative_url }}#{{ w }}">
-            <div class="note__meta"><span><b>{{ s.number }}</b> {{ s.name }}</span>{% if n.equity %}<span>{{ n.equity }}</span>{% endif %}</div>
+            <div class="note__meta">
+              <span><b>{{ s.number }}</b> {{ s.name }}</span>
+            </div>
+            <div class="note__meta">
+              <span>Week of <b>{{ n.week | date: "%-d %B %Y" }}</b></span>
+              {% if n.equity %}<span>Equity <b>{{ n.equity }}</b></span>{% endif %}
+            </div>
             <h3>{{ n.headline }}</h3>
-            <p>{{ n.content | markdownify | strip_html | truncatewords: 34 }}</p>
-            <span class="arrow-link">Read the note</span>
+            <span class="arrow-link">Read on the {{ s.name }} desk</span>
           </a>
         {%- endif -%}
       {%- endfor -%}
@@ -161,7 +166,7 @@ body_class: home
   <div class="wrap">
     <div class="cta" data-reveal>
       <p class="eyebrow eyebrow--center">Recruiting season?</p>
-      <h2>“What company do you actually follow?”</h2>
+      <h2>"What company do you actually follow?"</h2>
       <p>Every Meridian62 analyst has an answer, a byline to prove it and twelve weeks of notes behind it. Readers get the same market, explained by the people who study the engineering, science and economics underneath it.</p>
       <div class="btn-row" style="justify-content:center">
         <a class="btn" href="{{ '/join/' | relative_url }}">Write for us</a>
