@@ -8,6 +8,9 @@ body_class: home
 {%- assign all_notes = site.notes | where_exp: "n", "n.published != false" | sort: "week" | reverse -%}
 {%- assign latest_week = "" -%}
 {%- if all_notes.size > 0 -%}{%- assign latest_week = all_notes[0].week | date: "%Y-%m-%d" -%}{%- endif -%}
+{%- assign top_note = all_notes[0] -%}
+{%- assign top_sector = nil -%}
+{%- if top_note -%}{%- assign top_sector = sectors | where: "slug", top_note.sector | first -%}{%- endif -%}
 
 <section class="hero">
   <div class="hero__lines" aria-hidden="true">
@@ -30,6 +33,13 @@ body_class: home
     <p class="hero__sub" data-enter="3">Sixty-Two</p>
     <p class="hero__line" data-enter="4">One market. Many angles.</p>
     <p class="hero__lede" data-enter="5">A weekly market publication written by students across universities, degrees and countries — every note on a named company, sourced from what the company itself published, and written so that anyone can read it.</p>
+    {% if latest_week != "" and top_sector %}
+    <a class="hero__teaser" href="{{ top_sector.url | relative_url }}#{{ latest_week }}">
+      <span class="hero__teaser-tag">This week</span>
+      <span class="hero__teaser-headline">{{ top_note.headline }}</span>
+      <span class="hero__teaser-arrow" aria-hidden="true">→</span>
+    </a>
+    {% endif %}
     <div class="btn-row" data-enter="6">
       <a class="btn" href="{{ '/sectors/' | relative_url }}">Read the sectors</a>
       <a class="btn btn--ghost" href="{{ '/about/' | relative_url }}">What we are</a>
@@ -43,52 +53,6 @@ body_class: home
     {%- for i in (1..2) -%}{%- for s in sectors -%}<span class="ticker__item"><b>{{ s.number }}</b>{{ s.name }}</span>{%- endfor -%}{%- endfor -%}
   </div>
 </div>
-
-<section class="section">
-  <div class="wrap">
-    <div class="split">
-      <div data-reveal>
-        <p class="eyebrow">What we are</p>
-        <p class="statement">A student newsroom that follows <em>named companies</em>, week after week — and explains them in plain English.</p>
-      </div>
-      <div data-reveal>
-        <p class="lede">Every contributor owns a short list of companies inside one sector and reads what those companies actually publish: results, filings, capital-markets days, press releases. Each week a few desks write one short note that makes one clear point. Different degrees, different countries, different languages — the same market, read from every angle.</p>
-        <p style="margin-top:1.6rem"><a class="arrow-link" href="{{ '/about/' | relative_url }}">Why Meridian62 exists</a></p>
-      </div>
-    </div>
-    <div class="stats" style="margin-top:clamp(40px,6vw,72px)" data-reveal-stagger>
-      <div class="stat"><b>11</b><span>Sector desks</span></div>
-      <div class="stat"><b>{{ site.contributors_count }}</b><span>Student contributors</span></div>
-      <div class="stat"><b>{{ site.degree_subjects_count }}</b><span>Degree Subjects</span></div>
-      <div class="stat"><b>Mon</b><span>Publishes every Monday</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--alt" style="padding-top:0">
-  <div class="wrap">
-    <div class="section__head" data-reveal>
-      <div><p class="eyebrow">What we do</p><h2>Three things, done properly.</h2></div>
-    </div>
-    <div class="pillars" data-reveal-stagger>
-      <a class="pillar" href="{{ '/sectors/' | relative_url }}">
-        <span class="num">01</span>
-        <h3>Weekly sector notes</h3>
-        <p>400-600 words on one company a desk covers. What happened, what people are missing, why it matters, and what we are watching next. Every number sourced.</p>
-      </a>
-      <a class="pillar" href="{{ '/quarterly/' | relative_url }}">
-        <span class="num">02</span>
-        <h3>Quarterly market recap</h3>
-        <p>Four times a year, a long read that turns twelve weeks of desk coverage into the handful of things that actually connected the market.</p>
-      </a>
-      <a class="pillar" href="{{ '/glossary/' | relative_url }}">
-        <span class="num">03</span>
-        <h3>Decoded</h3>
-        <p>Every specialist term we use, defined in one plain sentence. A glossary that grows with every note, so nobody needs a finance degree to read one.</p>
-      </a>
-    </div>
-  </div>
-</section>
 
 <section class="section" id="latest">
   <div class="wrap">
@@ -125,6 +89,52 @@ body_class: home
   The first notes go live on October 5th, and from then on a few desks publish every Monday morning on a fixed rota. Until then, read <a href="{{ '/about/' | relative_url }}" style="color:var(--gold)">what we are</a>, meet <a href="{{ '/team/' | relative_url }}" style="color:var(--gold)">the team</a>, and see the equities each desk has picked on the <a href="{{ '/sectors/' | relative_url }}" style="color:var(--gold)">sectors</a> page.
 </div>
     {%- endif -%}
+  </div>
+</section>
+
+<section class="section section--alt" style="padding-top:0">
+  <div class="wrap">
+    <div class="split">
+      <div data-reveal>
+        <p class="eyebrow">What we are</p>
+        <p class="statement">A student newsroom that follows <em>named companies</em>, week after week — and explains them in plain English.</p>
+      </div>
+      <div data-reveal>
+        <p class="lede">Every contributor owns a short list of companies inside one sector and reads what those companies actually publish: results, filings, capital-markets days, press releases. Each week a few desks write one short note that makes one clear point. Different degrees, different countries, different languages — the same market, read from every angle.</p>
+        <p style="margin-top:1.6rem"><a class="arrow-link" href="{{ '/about/' | relative_url }}">Why Meridian62 exists</a></p>
+      </div>
+    </div>
+    <div class="stats" style="margin-top:clamp(40px,6vw,72px)" data-reveal-stagger>
+      <div class="stat"><b>11</b><span>Sector desks</span></div>
+      <div class="stat"><b>{{ site.contributors_count }}</b><span>Student contributors</span></div>
+      <div class="stat"><b>{{ site.degree_subjects_count }}</b><span>Degree Subjects</span></div>
+      <div class="stat"><b>Mon</b><span>Publishes every Monday</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section__head" data-reveal>
+      <div><p class="eyebrow">What we do</p><h2>Three things, done properly.</h2></div>
+    </div>
+    <div class="pillars" data-reveal-stagger>
+      <a class="pillar" href="{{ '/sectors/' | relative_url }}">
+        <span class="num">01</span>
+        <h3>Weekly sector notes</h3>
+        <p>400-600 words on one company a desk covers. What happened, what people are missing, why it matters, and what we are watching next. Every number sourced.</p>
+      </a>
+      <a class="pillar" href="{{ '/quarterly/' | relative_url }}">
+        <span class="num">02</span>
+        <h3>Quarterly market recap</h3>
+        <p>Four times a year, a long read that turns twelve weeks of desk coverage into the handful of things that actually connected the market.</p>
+      </a>
+      <a class="pillar" href="{{ '/glossary/' | relative_url }}">
+        <span class="num">03</span>
+        <h3>Decoded</h3>
+        <p>Every specialist term we use, defined in one plain sentence. A glossary that grows with every note, so nobody needs a finance degree to read one.</p>
+      </a>
+    </div>
   </div>
 </section>
 
