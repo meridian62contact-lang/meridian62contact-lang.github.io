@@ -28,7 +28,7 @@ permalink: /glossary/
         <h2 class="glossary-letter" id="letter-{{ f }}">{{ f }}</h2>
       {%- endif -%}
            <dl class="term">
-        <dt>{{ t.term }}</dt>
+        <dt id="term-{{ t.term | slugify }}">{{ t.term }}</dt>
         <dd>{{ t.definition }}
           {%- assign s = nil -%}
           {%- if t.sector and t.sector != "" -%}{%- assign s = sectors | where: "slug", t.sector | first -%}{%- endif -%}
