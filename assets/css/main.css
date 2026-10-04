@@ -273,6 +273,10 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 
 /* latest notes list (home) */
 .latest{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+.latest--4{grid-template-columns:repeat(2,1fr)}
+.latest--3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.latest--3{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.latest--3,.latest--4{grid-template-columns:1fr}}
 .latest__item{background:var(--bg);padding:clamp(26px,3vw,40px);display:flex;flex-direction:column;gap:.8rem;transition:background .4s var(--ease)}
 .latest__item:hover{background:var(--bg-2)}
 .latest__item .note__meta{margin:0}
