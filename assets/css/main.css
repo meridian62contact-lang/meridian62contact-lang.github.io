@@ -258,6 +258,8 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .note__body li{margin-bottom:.35rem}
 .note__body a{color:var(--gold);border-bottom:1px solid var(--line)}
 .note__body a:hover{color:var(--gold-2)}
+.glossary-term{color:var(--ink);background:rgba(201,164,92,.22);border-bottom:1px solid var(--gold);text-decoration:none;padding:.02em .2em;border-radius:2px;transition:background .2s var(--ease),color .2s var(--ease)}
+.glossary-term:hover{background:rgba(201,164,92,.4);color:var(--bg)}
 .note__body sup{font-family:var(--sans);font-size:.7em;color:var(--gold)}
 .note__body blockquote{margin:1.5rem 0;padding-left:1.2rem;border-left:2px solid var(--gold);color:var(--ink-2);font-style:italic}
 .note__foot{margin-top:2rem;font-family:var(--sans);font-size:.74rem;color:var(--muted);line-height:1.55;max-width:68ch}
@@ -307,7 +309,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 .glossary-letter::after{content:"";height:1px;flex:1;background:var(--line-soft)}
 .term{display:grid;grid-template-columns:minmax(160px,1fr) 3fr;gap:1rem 2rem;padding:1.1rem 0;border-top:1px solid var(--line-soft)}
 @media (max-width:600px){.term{grid-template-columns:1fr;gap:.3rem}}
-.term dt{font-family:var(--display);font-size:1.25rem}
+.term dt{font-family:var(--display);font-size:1.25rem;scroll-margin-top:100px}
 .term dd{margin:0;color:var(--ink-2)}
 .term dd .small{margin-top:.3rem}
 .search{width:100%;background:transparent;border:1px solid var(--line-soft);color:var(--ink);font-family:var(--sans);font-size:1rem;padding:.9rem 1.1rem;margin-bottom:1.6rem}
