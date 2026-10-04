@@ -409,3 +409,97 @@
 - term: "Private label"
   definition: "Products manufactured for and sold under a retailer's own brand name, rather than a name-brand manufacturer's — usually cheaper and higher-margin for the retailer."
   sector: "consumer-retail-luxury"
+
+# ---------- Added from the 5 October 2026 release ----------
+
+- term: "LNG"
+  definition: "Liquefied natural gas — natural gas cooled until it turns into a liquid, which shrinks its volume enough to be shipped by tanker."
+  sector: "energy-utilities"
+
+- term: "Mtpa"
+  definition: "Million tonnes per annum — the standard way of measuring how much LNG a plant can produce in a year."
+  sector: "energy-utilities"
+
+- term: "Free-on-board (FOB)"
+  definition: "A contract where the customer takes ownership of the cargo at the export terminal and arranges its own shipping."
+  sector: "energy-utilities"
+
+- term: "Brownfield"
+  definition: "Expanding a site that is already built and operating, rather than starting from scratch on new land."
+  sector: "energy-utilities"
+
+- term: "Optimised Cascade process"
+  definition: "A liquefaction design that cools gas in stages, each stage using a different refrigerant to reach a lower temperature."
+  sector: "energy-utilities"
+
+- term: "Refrigerant"
+  definition: "A fluid that absorbs heat as it evaporates and releases it as it condenses, used to carry heat out of a gas."
+  sector: "energy-utilities"
+
+- term: "Vapour pressure"
+  definition: "The pressure at which a liquid and its vapour are in balance at a given temperature, which rises as the liquid gets warmer."
+  sector: "energy-utilities"
+
+- term: "Clausius-Clapeyron relation"
+  definition: "The equation that describes how steeply a liquid's vapour pressure rises as temperature increases."
+  sector: "energy-utilities"
+
+- term: "FERC"
+  definition: "The US government body that approves the building of LNG export terminals."
+  sector: "energy-utilities"
+
+- term: "Power density"
+  definition: "How much electrical power, and therefore heat, a single server rack draws, usually measured in kilowatts per rack."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Cold plate"
+  definition: "A metal plate with internal channels that sits directly on a chip and carries coolant close enough to pull heat away faster than air can."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Rack"
+  definition: "The tall, shelf-like frame that holds a data centre's servers and chips, stacked one above another."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Comparable basis"
+  definition: "A way of comparing figures after adjusting for one-off effects like currency movements or acquisitions, so the comparison reflects underlying business performance."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Power draw"
+  definition: "The amount of electricity a device, such as a chip or a rack, is consuming at a given moment."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Orders"
+  definition: "The value of new contracts and business a company has won in a given period, not yet delivered or recognised as revenue."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Tolerability"
+  definition: "How well patients can take a drug without experiencing unacceptable side effects."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Non-inferior HbA1c reduction"
+  definition: "A new drug lowers blood sugar (HbA1c) by at least as much as an existing treatment, within a pre-defined acceptable margin."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Manufacturing economics"
+  definition: "How much it costs, and how efficiently, a drug can be produced at scale."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Yield"
+  definition: "The annual return on a bond, expressed as a percentage of what an investor paid for it."
+  sector: "macro-rates-fx"
+
+- term: "Real yield"
+  definition: "A bond's yield after subtracting expected inflation."
+  sector: "macro-rates-fx"
+
+- term: "Spot gold"
+  definition: "The price for gold bought and delivered now, rather than at a future date."
+  sector: "macro-rates-fx"
+
+- term: "Dollar index"
+  definition: "A measure of the dollar's value against a basket of other major currencies."
+  sector: "macro-rates-fx"
+
+- term: "Federal funds rate"
+  definition: "The interest rate the Federal Reserve sets and the one meant when people say the Fed has raised or cut rates."
+  sector: "macro-rates-fx"
