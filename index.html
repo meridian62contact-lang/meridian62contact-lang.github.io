@@ -64,23 +64,34 @@ body_class: home
       <a class="arrow-link" href="{{ '/schedule/' | relative_url }}">Publishing schedule</a>
     </div>
     {%- if latest_week != "" -%}
-    <div class="latest" data-reveal-stagger>
+    {%- assign latest_notes = "" | split: "" -%}
+    {%- for s in sectors -%}
+      {%- assign sector_note = nil -%}
       {%- for n in all_notes -%}
         {%- assign w = n.week | date: "%Y-%m-%d" -%}
-        {%- if w == latest_week -%}
-          {%- assign s = sectors | where: "slug", n.sector | first -%}
-          <a class="latest__item" href="{{ s.url | relative_url }}#{{ w }}">
-            <div class="note__meta">
-              <span><b>{{ s.number }}</b> {{ s.name }}</span>
-            </div>
-            <div class="note__meta">
-              <span>Week of <b>{{ n.week | date: "%-d %B %Y" }}</b></span>
-              {% if n.equity %}<span>Equity <b>{{ n.equity }}</b></span>{% endif %}
-            </div>
-            <h3>{{ n.headline }}</h3>
-            <span class="arrow-link">Read on the {{ s.name }} desk</span>
-          </a>
+        {%- if w == latest_week and n.sector == s.slug -%}
+          {%- assign sector_note = n -%}
+          {%- break -%}
         {%- endif -%}
+      {%- endfor -%}
+      {%- if sector_note -%}{%- assign latest_notes = latest_notes | push: sector_note -%}{%- endif -%}
+    {%- endfor -%}
+    {%- assign latest_count = latest_notes.size -%}
+    <div class="latest latest--{{ latest_count }}" data-reveal-stagger>
+      {%- for n in latest_notes -%}
+        {%- assign w = n.week | date: "%Y-%m-%d" -%}
+        {%- assign s = sectors | where: "slug", n.sector | first -%}
+        <a class="latest__item" href="{{ s.url | relative_url }}#{{ w }}">
+          <div class="note__meta">
+            <span><b>{{ s.number }}</b> {{ s.name }}</span>
+          </div>
+          <div class="note__meta">
+            <span>Week of <b>{{ n.week | date: "%-d %B %Y" }}</b></span>
+            {% if n.equity %}<span>Equity <b>{{ n.equity }}</b></span>{% endif %}
+          </div>
+          <h3>{{ n.headline }}</h3>
+          <span class="arrow-link">Read on the {{ s.name }} desk</span>
+        </a>
       {%- endfor -%}
     </div>
     {%- else -%}
