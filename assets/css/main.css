@@ -95,6 +95,7 @@ h3{font-size:clamp(1.35rem,2.2vw,1.8rem)}
   border-bottom:1px solid transparent;
 }
 .site-header.is-scrolled{background:rgba(7,11,20,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:12px 0;border-bottom-color:var(--line-soft)}
+body.nav-open .site-header{background:var(--bg) !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:2rem}
 .brand{display:flex;align-items:center;gap:14px;color:var(--ink)}
 .brand .mark{width:34px;height:34px;color:var(--ink)}
@@ -105,7 +106,7 @@ h3{font-size:clamp(1.35rem,2.2vw,1.8rem)}
 .nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease-out)}
 .nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
 .nav a[aria-current="page"]{color:var(--ink)}
-.nav-toggle{display:none;background:none;border:1px solid var(--line-soft);color:var(--ink);width:44px;height:44px;cursor:pointer;position:relative}
+.nav-toggle{display:none;background:none;border:1px solid var(--line-soft);color:var(--ink);width:44px;height:44px;cursor:pointer;position:relative;z-index:41}
 .nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:11px;right:11px;height:1px;background:var(--ink);transition:transform .35s var(--ease),top .35s var(--ease)}
 .nav-toggle span{top:50%}
 .nav-toggle span::before{left:0;right:0;top:-7px}
@@ -115,11 +116,11 @@ body.nav-open .nav-toggle span::before{top:0;transform:rotate(45deg)}
 body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 @media (max-width:900px){
   .nav-toggle{display:block}
-  .nav{position:fixed;inset:0;background:rgba(7,11,20,.97);flex-direction:column;justify-content:center;gap:2.2rem;
+   .nav{position:fixed;inset:0;background:var(--bg);flex-direction:column;justify-content:center;gap:2.2rem;
     opacity:0;pointer-events:none;transition:opacity .4s var(--ease);z-index:40}
   .nav a{font-family:var(--display);font-size:2rem;letter-spacing:.12em;text-transform:none}
   body.nav-open .nav{opacity:1;pointer-events:auto}
-  body.nav-open{overflow:hidden}
+  body.nav-open{position:fixed;left:0;right:0;width:100%;overflow:hidden}
 }
 
 /* ---------- hero ---------- */
@@ -476,6 +477,7 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
 
 /* ---------- subscribe pop-up ---------- */
 .subscribe-popup{position:fixed;bottom:24px;left:24px;z-index:80;max-width:340px;background:var(--bg-2);border:1px solid var(--line);padding:1.6rem 1.8rem;box-shadow:0 20px 60px rgba(0,0,0,.5);transform:translateY(20px);opacity:0;pointer-events:none;transition:opacity .5s var(--ease),transform .5s var(--ease)}
+body.nav-open .subscribe-popup{display:none}
 .subscribe-popup.is-visible{opacity:1;transform:none;pointer-events:auto}
 .subscribe-popup__close{position:absolute;top:10px;right:12px;background:none;border:0;color:var(--muted);font-size:1.1rem;cursor:pointer;line-height:1;padding:4px}
 .subscribe-popup__close:hover{color:var(--gold)}
