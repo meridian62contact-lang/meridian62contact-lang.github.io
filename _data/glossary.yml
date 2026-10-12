@@ -503,3 +503,109 @@
 - term: "Federal funds rate"
   definition: "The interest rate the Federal Reserve sets and the one meant when people say the Fed has raised or cut rates."
   sector: "macro-rates-fx"
+
+# ---------- Added from the 12 October 2026 release ----------
+
+- term: "Aggregates"
+  definition: "Crushed rock, sand and gravel used in construction, especially for roads and concrete."
+  sector: "materials-mining-infrastructure"
+
+- term: "Hot-mix asphalt"
+  definition: "Road surfacing made by mixing heated aggregates with bitumen, which must be laid and pressed down while still hot."
+  sector: "materials-mining-infrastructure"
+
+- term: "Warm-mix asphalt"
+  definition: "Asphalt made and laid at lower temperatures than hot-mix, so it can travel further before it cools too much."
+  sector: "materials-mining-infrastructure"
+
+- term: "Compaction"
+  definition: "Pressing freshly laid asphalt down with rollers so it sets firm and lasts."
+  sector: "materials-mining-infrastructure"
+
+- term: "Catchment area"
+  definition: "The area a quarry or plant can supply economically, mainly limited by transport cost and distance."
+  sector: "materials-mining-infrastructure"
+
+- term: "Delivered cost"
+  definition: "The price of material once it reaches the site, including transport, not just the cost of producing it."
+  sector: "materials-mining-infrastructure"
+
+- term: "Permit (quarry licence)"
+  definition: "Official permission to extract material from a quarry, which can take years to get."
+  sector: "materials-mining-infrastructure"
+
+- term: "Regulatory approval"
+  definition: "Sign-off from competition authorities before a deal can complete, sometimes conditional on selling off sites."
+  sector: "materials-mining-infrastructure"
+
+- term: "Semiconductor supply chain"
+  definition: "The companies and processes involved in designing, manufacturing and delivering chips."
+  sector: "technology-semiconductors"
+
+- term: "EUV lithography"
+  definition: "A technology that uses very short-wavelength ultraviolet light to print tiny circuit patterns onto silicon wafers."
+  sector: "technology-semiconductors"
+
+- term: "Wafer"
+  definition: "A thin disc of silicon on which many chips are manufactured at the same time."
+  sector: "technology-semiconductors"
+
+- term: "Manufacturing yield"
+  definition: "The percentage of manufactured chips that work correctly."
+  sector: "technology-semiconductors"
+
+- term: "Manufacturing capacity"
+  definition: "The amount of chips a factory can produce over a given period."
+  sector: "technology-semiconductors"
+
+- term: "High-bandwidth memory (HBM)"
+  definition: "A type of memory that can transfer large amounts of data very quickly, particularly useful for AI processors."
+  sector: "technology-semiconductors"
+
+- term: "Export controls"
+  definition: "Government rules restricting the sale of certain products or technologies to other countries."
+  sector: "technology-semiconductors"
+
+- term: "Budget"
+  definition: "The Chancellor's yearly statement of the government's tax and spending plans."
+  sector: "financials-banks"
+
+- term: "Treasury"
+  definition: "The government department that runs the UK's public finances and taxes."
+  sector: "financials-banks"
+
+- term: "30-year borrowing costs"
+  definition: "The interest the UK government pays when it borrows money for 30 years."
+  sector: "financials-banks"
+
+- term: "Current account"
+  definition: "An everyday bank account for wages, bills and card payments, which usually pays little or no interest."
+  sector: "financials-banks"
+
+- term: "Structural hedge"
+  definition: "Deals that fix, for several years at a time, what a bank earns on steady money such as current-account balances, so changes in interest rates only reach it gradually."
+  sector: "financials-banks"
+
+- term: "Percentage point"
+  definition: "The simple difference between two percentages, so a move from 3.75% to 4% is 0.25 percentage points."
+  sector: "financials-banks"
+
+- term: "Extra 3% charge"
+  definition: "The bank surcharge, a tax on bank profits above £100m a year, paid on top of the 25% corporation tax all large companies pay."
+  sector: "financials-banks"
+
+- term: "Chancellor"
+  definition: "The government minister in charge of the UK's finances and taxes."
+  sector: "financials-banks"
+
+- term: "Price Ladder"
+  definition: "The structured spectrum of product price points offered by a brand, designed to guide consumers from lower-priced entry items to high-value core flagships."
+  sector: "consumer-retail-luxury"
+
+- term: "Customer Lifetime Value (LTV)"
+  definition: "The total net profit or revenue a business expects to earn from a customer throughout the entire duration of their purchasing relationship."
+  sector: "consumer-retail-luxury"
+
+- term: "Cannibalization"
+  definition: "A reduction in sales volume or revenue of a company's high-margin products caused by the introduction of cheaper alternative items within its own lineup."
+  sector: "consumer-retail-luxury"
