@@ -609,3 +609,15 @@
 - term: "Cannibalization"
   definition: "A reduction in sales volume or revenue of a company's high-margin products caused by the introduction of cheaper alternative items within its own lineup."
   sector: "consumer-retail-luxury"
+
+- term: "Cash flow"
+  definition: "The actual money moving in and out of a company day to day, separate from the profit it reports on paper; a company can look profitable on paper but still run short of real cash if money going out happens faster than money coming in."
+  sector: "technology-semiconductors"
+
+- term: "Operating costs"
+  definition: "The day-to-day expenses a company incurs running its business, such as staff, utilities and maintenance, separate from one-off spending on new buildings or equipment."
+  sector: "technology-semiconductors"
+
+- term: "Arizona-specific margins"
+  definition: "Profit margins reported specifically for TSMC's Arizona operations alone, rather than blended into the company's overall, global results."
+  sector: "technology-semiconductors"
