@@ -30,14 +30,11 @@
 </div>
 <script>
 (function(){
-  var KEY = "m62_subscribe_done";
-  if (localStorage.getItem(KEY)) return;
   var popup = document.getElementById("subscribePopup");
   setTimeout(function(){ popup.classList.add("is-visible"); }, 2000);
 
   document.getElementById("subscribeClose").addEventListener("click", function(){
     popup.classList.remove("is-visible");
-    localStorage.setItem(KEY, "1");
   });
 
   document.getElementById("subscribeForm").addEventListener("submit", function(e){
@@ -50,7 +47,6 @@
       body: "email=" + encodeURIComponent(email)
     });
     document.getElementById("subscribeFormWrap").innerHTML = "<p class='subscribe-popup__thanks'>You're on the list — thank you.</p>";
-    localStorage.setItem(KEY, "1");
   });
 })();
 </script>
