@@ -621,3 +621,105 @@
 - term: "Arizona-specific margins"
   definition: "Profit margins reported specifically for TSMC's Arizona operations alone, rather than blended into the company's overall, global results."
   sector: "technology-semiconductors"
+
+  # ---------- Added from the 19 October 2026 release ----------
+
+- term: "Specialty chemicals"
+  definition: "Chemicals made in smaller amounts for specific uses, with steadier earnings than bulk products."
+  sector: "chemicals"
+
+- term: "Commodity chemicals"
+  definition: "Standardized, high-volume chemicals sold mainly on price."
+  sector: "chemicals"
+
+- term: "Balance sheet"
+  definition: "A statement of what a company owns and owes; 'pressure' on it means taking on more debt."
+  sector: "chemicals"
+
+- term: "Consolidate the market"
+  definition: "To combine competitors through deals, reducing the number of players."
+  sector: "chemicals"
+
+- term: "Restructuring"
+  definition: "Reshaping a business, for example by cutting jobs or selling divisions, to improve profitability."
+  sector: "chemicals"
+
+- term: "Exploratory talks"
+  definition: "Early discussions to test whether a deal is possible, before formal negotiations."
+  sector: "chemicals"
+
+- term: "Operating environment"
+  definition: "The outside conditions a company faces, such as demand, prices, energy costs and competition."
+  sector: "chemicals"
+
+- term: "PET scan"
+  definition: "A medical scan that uses a small radioactive dose to show activity inside the body."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Tracer"
+  definition: "The radioactive substance injected before a PET scan."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Fluorine-18"
+  definition: "A radioactive form of fluorine used to make PET tracers."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Half-life"
+  definition: "The time it takes for a radioactive substance to lose half of its strength."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Cyclotron"
+  definition: "A machine that produces the radioactive atoms used in tracers."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Amyloid plaques"
+  definition: "Protein clumps in the brain linked to Alzheimer's disease."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Late-stage (Phase 3)"
+  definition: "The final, large-scale stage of testing before approval."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Pharmaceutical Diagnostics segment"
+  definition: "GE HealthCare's division that sells tracers and imaging agents."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Organic growth"
+  definition: "Growth excluding the effect of acquisitions, disposals and currency changes."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Adjusted EBIT margin"
+  definition: "Operating profit as a share of revenue, excluding one-off items."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Adjusted earnings per share"
+  definition: "Profit per share, excluding one-off items."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Advanced Imaging Solutions"
+  definition: "GE HealthCare's division that sells imaging equipment such as PET and MRI scanners."
+  sector: "healthcare-services-medical-equipment"
+
+- term: "Firm-fixed-price contract"
+  definition: "A contract where the price is set in advance and the company absorbs any cost overruns."
+  sector: "aerospace-defence"
+
+- term: "Cost overrun"
+  definition: "When a project costs more to complete than budgeted."
+  sector: "aerospace-defence"
+
+- term: "Stopgap (funding)"
+  definition: "A short-term budget that keeps spending flat until a longer-term budget is passed."
+  sector: "aerospace-defence"
+
+- term: "Electronic warfare"
+  definition: "Military use of electronics to disrupt or deceive an enemy's systems."
+  sector: "aerospace-defence"
+
+- term: "Midterms"
+  definition: "US congressional elections held halfway through a president's term."
+  sector: "aerospace-defence"
+
+- term: "YTD (year to date)"
+  definition: "The period from the start of the calendar year up to today."
+  sector: "aerospace-defence"
