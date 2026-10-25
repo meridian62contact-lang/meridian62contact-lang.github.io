@@ -723,3 +723,105 @@
 - term: "YTD (year to date)"
   definition: "The period from the start of the calendar year up to today."
   sector: "aerospace-defence"
+
+# ---------- Added from the 26 October 2026 release ----------
+
+- term: "Adjusted net profit"
+  definition: "Profit after all costs and tax, excluding one-off items."
+  sector: "energy-utilities"
+
+- term: "Networks"
+  definition: "Iberdrola's business that builds and runs power lines and substations."
+  sector: "energy-utilities"
+
+- term: "RIIO-T3"
+  definition: "The UK's current rulebook from Ofgem setting what electricity transmission companies can earn, which started in April 2026."
+  sector: "energy-utilities"
+
+- term: "NECEC"
+  definition: "New England Clean Energy Connect, a power line carrying electricity from Canada to New England in the US."
+  sector: "energy-utilities"
+
+- term: "Ancillary services"
+  definition: "Services that keep the electricity grid stable, such as balancing supply and demand."
+  sector: "energy-utilities"
+
+- term: "Regulator (CNMC, Ofgem, FERC)"
+  definition: "The government bodies that set grid companies' allowed returns in Spain, the UK and the US."
+  sector: "energy-utilities"
+
+- term: "Net debt"
+  definition: "A company's total borrowing minus the cash it holds."
+  sector: "energy-utilities"
+
+- term: "Regulated Asset Base (RAB)"
+  definition: "A financial and regulatory model where a company's return is set by the value of the assets it has built, rather than by the market."
+  sector: "energy-utilities"
+
+- term: "Concession"
+  definition: "A contract allowing a company to operate infrastructure, such as a motorway, for a specified period."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Group"
+  definition: "A parent company together with all the companies it owns."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Toll"
+  definition: "A fee a driver pays to use a particular road, bridge or tunnel, usually based on the distance travelled and the type of vehicle."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Melanoma"
+  definition: "A type of skin cancer that starts in the cells that give skin its colour (melanin). It can spread to other parts of the body if not caught early."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "ESMO"
+  definition: "The European Society for Medical Oncology, Europe's leading organisation for cancer doctors. Its annual conference is where major cancer trial results are often revealed for the first time."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "mRNA"
+  definition: "A molecule that carries genetic instructions from DNA to the cell's protein-making machinery."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Immunotherapy"
+  definition: "A cancer treatment that boosts the body's own immune system so it can recognise and attack cancer cells."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Recurrence"
+  definition: "When cancer comes back after treatment, such as after a tumour has been surgically removed."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Hazard ratio"
+  definition: "The standard measure of relative risk over time in clinical trials. It compares the rate at which an event occurs in the treatment group with the rate in the control group across the follow-up period; a hazard ratio of 1.0 means no difference, and below 1.0 favours the new treatment."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Metastasis"
+  definition: "The spreading of cancer, as cells from the original (primary) tumour travel to other parts of the body to form new tumours."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Gilt"
+  definition: "A bond issued by the UK government to borrow money."
+  sector: "macro-rates-fx"
+
+- term: "Gilt yield"
+  definition: "The interest rate the government effectively pays when it borrows by selling gilts."
+  sector: "macro-rates-fx"
+
+- term: "Index-linked gilt"
+  definition: "A gilt whose interest and repayment rise with inflation."
+  sector: "macro-rates-fx"
+
+- term: "Retail Prices Index (RPI)"
+  definition: "An older measure of inflation, used to calculate payments on index-linked gilts."
+  sector: "macro-rates-fx"
+
+- term: "Debt interest"
+  definition: "The money the government pays each year on what it has borrowed."
+  sector: "macro-rates-fx"
+
+- term: "Office for Budget Responsibility (OBR)"
+  definition: "The independent body that forecasts the UK's public finances."
+  sector: "macro-rates-fx"
+
+- term: "Bank Rate"
+  definition: "The Bank of England's main interest rate."
+  sector: "macro-rates-fx"
