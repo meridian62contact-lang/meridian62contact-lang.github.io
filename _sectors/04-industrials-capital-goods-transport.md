@@ -16,7 +16,7 @@ analysts:
   - name: "Luca Serpietri"
     degree: "BSc Mathematics with Management and Finance"
     university: "King's College London"
- - name: "Yasmeen Moussalem"
+  - name: "Yasmeen Moussalem"
     degree: "MEng Civil and Environmental Engineering"
     university: "Imperial College London"
 
