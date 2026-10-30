@@ -19,7 +19,7 @@ analysts:
    - name: "Maya Halawi"
     degree: "MEng Biomedical Engineering"
     university: "Imperial College London"
-  - name: "Zihan Yin"
+   - name: "Zihan Yin"
     degree: "BSc (Hons) Medical Biosciences"
     university: "Imperial College London"
   
