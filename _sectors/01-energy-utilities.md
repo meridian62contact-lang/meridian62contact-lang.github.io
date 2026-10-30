@@ -19,6 +19,9 @@ analysts:
   - name: "Jaime Cortés Vilaplana"
     degree: "MEng Chemical Engineering"
     university: "Imperial College London"
+  - name: "Milica Jeftic"
+    degree: "BSc Biochemistry"
+    university: "Imperial College London"
 
 # 3–5 companies the desk follows all term. 'watching' is the one-sentence coverage line:
 # the specific thing the desk is watching right now (update it whenever it changes).
