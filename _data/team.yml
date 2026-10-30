@@ -21,6 +21,9 @@ editors:
   - name: "Maggie Brown"
     degree: "BSc Medical Biosciences"
     university: "Imperial College London"
+  - name: "Zihan Yin"
+    degree: "BSc (Hons) Medical Biosciences"
+    university: "Imperial College London"
 
 quarterly:
   - name: "Emil Mingaliev"
