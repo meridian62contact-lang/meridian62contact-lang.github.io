@@ -825,3 +825,172 @@
 - term: "Bank Rate"
   definition: "The Bank of England's main interest rate."
   sector: "macro-rates-fx"
+# ---------- Added from the 2 November 2026 release ----------
+
+- term: "Brine"
+  definition: "Naturally occurring salty water containing dissolved lithium and other minerals, found beneath salt flats."
+  sector: "materials-mining-infrastructure"
+
+- term: "Solar evaporation"
+  definition: "A process that uses sunlight to evaporate water from brine, leaving the lithium and other minerals more concentrated."
+  sector: "materials-mining-infrastructure"
+
+- term: "Direct lithium extraction (DLE)"
+  definition: "A technology that removes lithium directly from brine using specialised materials, rather than relying on evaporation ponds."
+  sector: "materials-mining-infrastructure"
+
+- term: "Lithium recovery rate"
+  definition: "The percentage of lithium in the original brine that is successfully extracted."
+  sector: "materials-mining-infrastructure"
+
+- term: "Lithium ions"
+  definition: "Electrically charged lithium particles dissolved in brine, which can be captured during DLE."
+  sector: "materials-mining-infrastructure"
+
+- term: "Pilot plant"
+  definition: "A small-scale facility used to test whether a technology works before building a full commercial operation."
+  sector: "materials-mining-infrastructure"
+
+- term: "Net brine extraction"
+  definition: "The volume of brine pumped out of a salt flat minus the volume returned."
+  sector: "materials-mining-infrastructure"
+
+- term: "Commercial scale"
+  definition: "Production large enough to operate as a full industrial operation rather than a small-scale test."
+  sector: "materials-mining-infrastructure"
+
+- term: "AI cloud provider"
+  definition: "A company that rents out computing power for artificial intelligence over the internet."
+  sector: "technology-semiconductors"
+
+- term: "Notes"
+  definition: "Bonds, meaning loans from investors that pay a fixed rate of interest each year and are repaid on a set date."
+  sector: "technology-semiconductors"
+
+- term: "Unsecured"
+  definition: "Describes debt that is not backed by specific assets that lenders could claim if the borrower failed to pay."
+  sector: "technology-semiconductors"
+
+- term: "Net interest expense"
+  definition: "The cost of a company's borrowing over a period, after subtracting any interest it earned."
+  sector: "technology-semiconductors"
+
+- term: "Adjusted operating income"
+  definition: "Profit from running the business, calculated on the company's own basis by leaving out items it chooses to exclude, so it is not a standard accounting measure."
+  sector: "technology-semiconductors"
+
+- term: "Revenue backlog"
+  definition: "The value of future sales that customers have committed to under signed contracts but that have not yet been delivered."
+  sector: "technology-semiconductors"
+
+- term: "Binding limit"
+  definition: "The single factor that actually caps how much a system can produce."
+  sector: "technology-semiconductors"
+
+- term: "Plant"
+  definition: "In process engineering, the physical equipment and facilities that produce output."
+  sector: "technology-semiconductors"
+
+- term: "Active power"
+  definition: "Electrical capacity that is connected and supplying running computer equipment."
+  sector: "technology-semiconductors"
+
+- term: "Contracted power"
+  definition: "Electrical capacity secured through agreements, including capacity for sites that are not yet operating."
+  sector: "technology-semiconductors"
+
+- term: "GW (gigawatt)"
+  definition: "A unit of power equal to one billion watts."
+  sector: "technology-semiconductors"
+
+- term: "Property and equipment"
+  definition: "Long-lasting physical assets such as buildings, servers, chips and networking gear."
+  sector: "technology-semiconductors"
+
+- term: "Commissioning"
+  definition: "Installing, testing and approving equipment before it is put into normal use."
+  sector: "technology-semiconductors"
+
+- term: "Closed-loop liquid cooling"
+  definition: "A cooling system that keeps recirculating the same coolant rather than continuously drawing in and discharging fresh water."
+  sector: "technology-semiconductors"
+
+- term: "Direct-to-chip"
+  definition: "A cooling method in which coolant flows through metal plates fixed directly onto processors to carry heat away."
+  sector: "technology-semiconductors"
+
+- term: "Fabrication debris"
+  definition: "Particles and residues left inside pipes and components from manufacturing and installation."
+  sector: "technology-semiconductors"
+
+- term: "Glycol"
+  definition: "An alcohol-based liquid mixed with water in coolants, mainly to stop the mixture freezing and to limit microbial growth."
+  sector: "technology-semiconductors"
+
+- term: "pH"
+  definition: "A measure of how acidic or alkaline a liquid is."
+  sector: "technology-semiconductors"
+
+- term: "Reserve alkalinity"
+  definition: "A measure of a coolant's remaining capacity to neutralise acids, which indicates how much corrosion protection it has left."
+  sector: "technology-semiconductors"
+
+- term: "Corrosion inhibitor"
+  definition: "A chemical added to a coolant to slow the corrosion of the metals it touches."
+  sector: "technology-semiconductors"
+
+- term: "Dissolved metals"
+  definition: "Metal ions that have leached into a coolant from pipes or components, often a sign of corrosion."
+  sector: "technology-semiconductors"
+
+- term: "Corrosion"
+  definition: "The gradual deterioration of a metal through chemical or electrochemical reactions."
+  sector: "technology-semiconductors"
+
+- term: "Net interest income (NII)"
+  definition: "The interest a bank earns on loans and investments (assets) minus the interest it pays on deposits (liabilities)."
+  sector: "financials-banks"
+
+- term: "Prospect theory"
+  definition: "A theory that people judge outcomes as gains or losses compared with what they expected, and feel losses more strongly than equal gains."
+  sector: "financials-banks"
+
+- term: "Stoxx 600 Banks Index"
+  definition: "A measure of the combined share prices of large listed European banks, tracking the performance of major banking-sector companies across developed European countries."
+  sector: "financials-banks"
+
+- term: "Bank surcharge"
+  definition: "An extra rate of corporation tax charged on UK banking profits, on top of the standard rate."
+  sector: "financials-banks"
+
+- term: "Swiss watch exports"
+  definition: "Watches manufactured in Switzerland and shipped to international markets, used as an indicator of demand for the Swiss watch industry."
+  sector: "consumer-retail-luxury"
+
+- term: "Base effect"
+  definition: "When a percentage change appears unusually large or small because the comparison period had an unusually high or low starting figure."
+  sector: "consumer-retail-luxury"
+
+- term: "Precious-metal watches"
+  definition: "Watches made using valuable metals such as gold or platinum, typically positioned at the higher end of the market."
+  sector: "consumer-retail-luxury"
+
+- term: "Steel watches"
+  definition: "Watches made primarily from stainless steel, generally positioned at more accessible prices than precious-metal models."
+  sector: "consumer-retail-luxury"
+
+- term: "Value growth"
+  definition: "An increase in the total monetary value of goods exported, which can result from higher prices, greater volumes or both."
+  sector: "consumer-retail-luxury"
+
+- term: "Volume growth"
+  definition: "An increase in the number of watches exported, regardless of their selling price."
+  sector: "consumer-retail-luxury"
+
+- term: "Inventory rebuilding"
+  definition: "When retailers or distributors increase their stock levels after previously reducing them, creating additional orders for manufacturers."
+  sector: "consumer-retail-luxury"
+
+- term: "Supply-chain normalisation"
+  definition: "A return to more stable production, manufacturing and distribution following periods of disruption."
+  sector: "consumer-retail-luxury"
