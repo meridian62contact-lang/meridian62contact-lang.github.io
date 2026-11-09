@@ -1,0 +1,33 @@
+---
+sector: chemicals
+week: 2026-11-09
+equity: "LyondellBasell · LYB"
+headline: "LyondellBasell's profits now sit on cheap US ethane"
+published: true
+---
+
+### What happened
+
+LyondellBasell reported Q3 2026 revenue of $8.50bn, up from $7.73bn in the same period last year, while net income reached $758m, compared with a loss of $890m in Q3 2025 [1]. <a class="glossary-term" href="/glossary/#term-ebitda">EBITDA</a> increased to $1.42bn, or $1.51bn excluding <a class="glossary-term" href="/glossary/#term-identified-items">identified items</a> [1]. The results reflected materially higher profitability in its Intermediates and Derivatives division, largely driven by stronger <a class="glossary-term" href="/glossary/#term-oxyfuels">oxyfuels</a> performance [1]. Stronger <a class="glossary-term" href="/glossary/#term-margin-spread">crack spreads</a> and favourable economics in the <a class="glossary-term" href="/glossary/#term-gasoline-blending">gasoline-blending</a> market helped improve margins in its oxyfuels business [1]. However, performance across the company's markets remained uneven, with geopolitical uncertainty continuing to affect customer buying patterns [2]. Management also warned that conditions in the Middle East are likely to remain uncertain, with any return to pre-conflict conditions potentially taking longer than anticipated [2].
+
+### What people are missing
+
+One thing people may be missing is that LyondellBasell said ongoing political and geographic uncertainty had varying effects across its key markets in Q3 2026 [1]. North America was stronger: <a class="glossary-term" href="/glossary/#term-integrated-margin">integrated polyethylene margins</a> in the Americas ended the quarter about 50% above 2025 levels, supported by September price momentum [3]. Domestic <a class="glossary-term" href="/glossary/#term-polyethylene-pe-and-polypropylene-pp">PE and PP</a> volumes increased roughly 6% and 5% year on year, respectively. September was LYB's best month for PE sales, and the industry announced price increases of $0.05 per pound for October and November [4]. <a class="glossary-term" href="/glossary/#term-olefins-and-polyolefins">Olefins and Polyolefins</a> Americas EBITDA nonetheless fell to $641m from its Q2 record as summer <a class="glossary-term" href="/glossary/#term-destocking">destocking</a> weighed on prices [4]. Europe, however, was weaker: O&P Europe, Asia and International EBITDA dropped to $13m amid Rhine logistics problems and high energy costs [4], while European <a class="glossary-term" href="/glossary/#term-operating-rate">operating rates</a> were forecast at about 60%, near <a class="glossary-term" href="/glossary/#term-technical-minimum">technical minimums</a> [4].
+
+### Why it matters
+
+LyondellBasell's (LYB) latest results highlight that its future profitability is becoming increasingly dependent on North America. The divergence across regions is stark: its US olefins and polyolefins business generated $641m in EBITDA, whereas its Europe, Asia and International segment managed just $13m [1]. In response, the company is strengthening the areas with better returns. In May 2026, LYB sold select European assets, and it is closing some European manufacturing [1]. For Q4, it expects to run its European plants at only 60% of capacity, compared with 85% in North America [1]. This leaves LYB's US margins dependent on cheap <a class="glossary-term" href="/glossary/#term-ethane">ethane</a>, which makes up roughly 75% of the <a class="glossary-term" href="/glossary/#term-feedstock">feedstock</a> for its US <a class="glossary-term" href="/glossary/#term-cracker">crackers</a> [1], giving it a cost advantage over competitors using oil-based <a class="glossary-term" href="/glossary/#term-naphtha">naphtha</a>. However, this also concentrates risk: US ethane prices are already about 24% above their Q3 average [4], and if this continues, the cost advantage would narrow. The durability of that US feedstock edge is therefore critical.
+
+### What we are watching next
+
+Attention now turns to whether North American polyethylene producers can sustain the announced price increases of $0.05 per pound for November, particularly as demand is expected to moderate towards year-end [3]. Export demand, customer purchasing patterns and seasonal inventory reductions will be important indicators of pricing strength [3]. Feedstock costs will also require attention: US ethane prices have risen significantly, and management expects this to place further pressure on <a class="glossary-term" href="/glossary/#term-ethylene-spread">ethylene margins</a> [1]. In Europe, weak <a class="glossary-term" href="/glossary/#term-downstream-demand">downstream demand</a> and cautious purchasing are likely to remain key challenges, with market participants watching whether geopolitical uncertainty and higher import costs influence buying activity [2]. LyondellBasell's Q4 results should provide a clearer indication of how these regional market conditions, alongside seasonal demand changes, affect operating performance [1][4].
+
+## Sources
+
+1. [LyondellBasell — LyondellBasell reports third quarter 2026 earnings (30 October 2026)](https://investors.lyondellbasell.com/news/news-details/2026/LyondellBasell-reports-third-quarter-2026-earnings/default.aspx)
+2. [Wall Street Journal — LyondellBasell revenue rises, warns of slow recovery in Middle East (30 October 2026)](https://www.wsj.com/business/earnings/lyondellbasell-revenue-rises-warns-of-slow-recovery-in-middle-east-95980509)
+3. [PlasticsToday — LyondellBasell profit jumps as PE prices rebound (30 October 2026)](https://www.plasticstoday.com/materials/lyondellbasell-profit-jumps-as-pe-prices-rebound)
+4. [Earnings Whispers via Finviz — LyondellBasell misses as record oxyfuels profits can't offset polymer squeeze; softer Q4 setup tempers strong cash story (30 October 2026)](https://finviz.com/news/412848/lyondellbasell-misses-as-record-oxyfuels-profits-cant-offset-polymer-squeeze-softer-q4-setup-tempers-strong-cash-story)
+5. [RBN Energy — Q3 2026 earnings calls: LyondellBasell sees ethane costs climb](https://rbnenergy.com/daily-posts/analyst-insight/q3-2026-earnings-calls-lyondellbasell-sees-ethane-costs-climb)
+6. [ICIS — November demand fears, geopolitics may sway Europe PE buying patterns (27 October 2026)](https://www.icis.com/explore/resources/news/2026/10/27/11238857/november-demand-fears-geopolitics-may-sway-europe-pe-buying-patterns/)
+7. [The Motley Fool — LyondellBasell (LYB) Q3 2026 earnings call transcript (30 October 2026)](https://www.fool.com/earnings/call-transcripts/2026/10/30/lyondellbasell-lyb-q3-2026-earnings-call-transcript/)
