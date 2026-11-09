@@ -994,3 +994,105 @@
 - term: "Supply-chain normalisation"
   definition: "A return to more stable production, manufacturing and distribution following periods of disruption."
   sector: "consumer-retail-luxury"
+
+# ---------- Added from the 9 November 2026 release ----------
+
+- term: "Identified items"
+  definition: "One-off gains or costs a company strips out so the underlying result is easier to compare."
+  sector: "chemicals"
+
+- term: "Oxyfuels"
+  definition: "Chemicals blended into petrol to raise its octane and help it burn more cleanly."
+  sector: "chemicals"
+
+- term: "Gasoline blending"
+  definition: "Mixing components into finished petrol; demand for blending drives oxyfuels prices."
+  sector: "chemicals"
+
+- term: "Integrated margin"
+  definition: "The profit across the whole chain, from feedstock through to the finished plastic."
+  sector: "chemicals"
+
+- term: "Polyethylene (PE) and polypropylene (PP)"
+  definition: "The two most widely used plastics, found in packaging, pipes and containers."
+  sector: "chemicals"
+
+- term: "Olefins and polyolefins"
+  definition: "The basic chemical building blocks (olefins) and the plastics made from them (polyolefins)."
+  sector: "chemicals"
+
+- term: "Destocking"
+  definition: "Customers running down stock they already hold instead of buying more, which weakens demand and prices."
+  sector: "chemicals"
+
+- term: "Operating rate"
+  definition: "How much of a plant's capacity is actually running, as a percentage."
+  sector: "chemicals"
+
+- term: "Technical minimum"
+  definition: "The lowest rate a plant can run at without being shut down."
+  sector: "chemicals"
+
+- term: "Ethane"
+  definition: "A gas separated from natural gas, used as a cheap feedstock for making plastics in the US."
+  sector: "chemicals"
+
+- term: "Naphtha"
+  definition: "A liquid made from crude oil, used as a feedstock instead of ethane in most of Europe and Asia."
+  sector: "chemicals"
+
+- term: "Ethylene spread"
+  definition: "The gap between the cost of ethane and the price of the ethylene made from it."
+  sector: "chemicals"
+
+- term: "Downstream demand"
+  definition: "Demand from the customers who turn these chemicals into finished goods."
+  sector: "chemicals"
+
+- term: "Appropriations"
+  definition: "The laws Congress passes to release money to government departments."
+  sector: "aerospace-defence"
+
+- term: "Full-year appropriations"
+  definition: "A complete budget for the whole financial year."
+  sector: "aerospace-defence"
+
+- term: "Base budget"
+  definition: "The main defence budget, which needs support from both parties to pass the Senate."
+  sector: "aerospace-defence"
+
+- term: "Party-line bill (reconciliation)"
+  definition: "A bill that can pass with the votes of one party only, so the party holding the Senate controls it."
+  sector: "aerospace-defence"
+
+- term: "Add-on"
+  definition: "Extra money requested on top of the base budget, here the $350 billion sought through the party-line bill."
+  sector: "aerospace-defence"
+
+- term: "Unfunded requirement"
+  definition: "Equipment the military says it needs but for which Congress has not yet provided money."
+  sector: "aerospace-defence"
+
+- term: "Interceptor"
+  definition: "A missile fired to destroy an incoming missile or aircraft."
+  sector: "aerospace-defence"
+
+- term: "Patriot"
+  definition: "The US long-range air and missile defence system, built by RTX."
+  sector: "aerospace-defence"
+
+- term: "SAMP/T"
+  definition: "The European long-range air defence system that competes with Patriot."
+  sector: "aerospace-defence"
+
+- term: "Aftermarket"
+  definition: "Spare parts, repairs and servicing sold over the life of an engine."
+  sector: "aerospace-defence"
+
+- term: "Congressional oversight"
+  definition: "The power of Congress to question, investigate and set conditions on how money is spent."
+  sector: "aerospace-defence"
+
+- term: "Exit poll"
+  definition: "A survey of voters taken as they leave polling stations, used to estimate why people voted as they did."
+  sector: "aerospace-defence"
