@@ -6,7 +6,7 @@
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><span></span></button>
     <nav class="nav" id="nav">
-      {%- assign items = "Sectors|/sectors/,Quarterly|/quarterly/,Decoded|/glossary/,Schedule|/schedule/,About|/about/,Team|/team/,Join|/join/" | split: "," -%}
+      {%- assign items = "Sectors|/sectors/,AI Map|/mine-to-model/,Quarterly|/quarterly/,Decoded|/glossary/,Schedule|/schedule/,About|/about/,Team|/team/,Join|/join/" | split: "," -%}
       {%- for item in items -%}
         {%- assign parts = item | split: "|" -%}
         {%- assign href = parts[1] -%}

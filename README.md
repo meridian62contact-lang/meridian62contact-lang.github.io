@@ -13,6 +13,8 @@ Read **Meridian62 — Launch & Website Manual.docx** for step-by-step instructio
 | Change the site name, tagline, email, socials| `_config.yml`                               |
 | Add a quarterly recap                        | Create a file in `_recaps/`                 |
 | Change the About / Join / Legal text         | `about.html`, `join.html`, `legal.md`       |
+| Update the Mine-to-Model map (companies, figures, sources) | `assets/js/m2m-data.js` (and change `as_of` in `_data/mine_to_model.yml`) |
+| Change which companies a desk lens highlights | `_data/mine_to_model.yml`                  |
 | Add a sector cover image                     | Upload a square JPG to `assets/img/sectors/` and set `image:` in the sector file |
 
 Nothing else needs touching.

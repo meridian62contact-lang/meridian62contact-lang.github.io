@@ -51,6 +51,16 @@ layout: default
       </div>
     </div>
     {% if content and content != "" %}<div class="prose" style="margin-top:2.4rem" data-reveal>{{ content }}</div>{% endif %}
+    {%- assign lens = site.data.mine_to_model.desks | where: "slug", s.slug | first -%}
+    {%- if lens %}
+    <div class="callout m2m-callout" style="margin-top:2.4rem" data-reveal>
+      <div>
+        <b>Mine-to-Model Map · {{ lens.focus }}</b>
+        <p>{{ lens.blurb }}</p>
+      </div>
+      <a class="btn" href="{{ '/mine-to-model/' | relative_url }}?desk={{ s.slug }}">See this desk on the map</a>
+    </div>
+    {%- endif %}
   </div>
 </section>
 

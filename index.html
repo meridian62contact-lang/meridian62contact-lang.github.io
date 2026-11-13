@@ -93,6 +93,29 @@ body_class: home
   </div>
 </section>
 
+{%- assign m2m = site.data.mine_to_model -%}
+<section class="section" id="mine-to-model" style="padding-top:0">
+  <div class="wrap">
+    <div class="m2m-teaser">
+      <div data-reveal>
+        <p class="eyebrow">New · Research tool</p>
+        <h2>The Mine-to-Model Map</h2>
+        <p class="lede">Follow the AI build-out from the copper mine and the gas plant at a chip fab to the cloud and the AI lab. Click any company to see how it makes money, how much of its demand is contracted, and which geopolitical fault lines run through it.</p>
+        <ul class="m2m-facts">
+          <li><b>67</b><span>Companies</span></li>
+          <li><b>10</b><span>Layers</span></li>
+          <li><b>{{ m2m.desks.size }}</b><span>Desk lenses</span></li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn" href="{{ '/mine-to-model/' | relative_url }}">Open the map</a>
+          <a class="btn btn--ghost" href="{{ '/mine-to-model/#money' | relative_url }}">Follow the money</a>
+        </div>
+      </div>
+      <a class="m2m-teaser__art" href="{{ '/mine-to-model/' | relative_url }}" data-reveal aria-label="Open the Mine-to-Model Map">{% include m2m-teaser.html %}</a>
+    </div>
+  </div>
+</section>
+
 <section class="section section--alt" style="padding-top:0">
   <div class="wrap">
     <div class="split">

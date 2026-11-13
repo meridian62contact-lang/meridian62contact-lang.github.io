@@ -1,0 +1,116 @@
+---
+layout: default
+title: Mine-to-Model Map
+eyebrow: Research tool · The AI supply chain
+lede: "How the AI build-out connects 67 players, from the copper mine and the gas plant at a chip fab to the cloud and the AI lab. Each line shows who supplies or funds whom. Click any company to see how it makes money, how much of that demand is contracted, where its cash-flow risks sit and which geopolitical fault lines run through it."
+description: "The Mine-to-Model Map: an interactive map of 67 companies in the AI supply chain, from metals and industrial gases to chips, power, cooling, clouds and AI labs, with contract coverage, cash-flow risks and geopolitics for each."
+permalink: /mine-to-model/
+extra_css: /assets/css/m2m.css
+---
+{%- assign m2m = site.data.mine_to_model -%}
+<section class="section--tight m2m" id="m2m" style="padding-top:0">
+  <div class="m2m-wide">
+    <p class="m2m-asof"><span>As of <b>{{ m2m.as_of }}</b></span><span>·</span><span>Not investment advice</span></p>
+
+    <nav class="m2m-tabs" aria-label="Map sections" style="margin-top:1.6rem">
+      <a href="#map" data-view="map">Supply-chain map</a>
+      <a href="#companies" data-view="companies">All companies</a>
+      <a href="#money" data-view="money">Follow the money</a>
+      <a href="#geopolitics" data-view="geopolitics">Geopolitics</a>
+      <a href="#styles" data-view="styles">Growth vs value</a>
+      <a href="#sources" data-view="sources">Sources</a>
+    </nav>
+
+    <div class="m2m-controls" id="m2m-controls">
+      <div class="m2m-row" data-filter="desk"><span class="m2m-lbl">Desk lens</span></div>
+      <div class="m2m-row" data-filter="region"><span class="m2m-lbl">Region</span></div>
+      <div class="m2m-row" data-filter="style"><span class="m2m-lbl">Style</span></div>
+      <div class="m2m-row" data-filter="demand"><span class="m2m-lbl">Demand</span></div>
+      <div class="m2m-row"><label class="m2m-lbl" for="m2m-q">Find</label><input id="m2m-q" class="m2m-search" type="search" placeholder="Company or ticker" autocomplete="off"></div>
+    </div>
+
+    <div class="m2m-lens" id="m2m-lens" hidden aria-live="polite"></div>
+
+    <section class="m2m-view" id="m2m-v-map">
+      <div class="m2m-mapbox">
+        <div class="m2m-tools">
+          <div class="m2m-legend">
+            <span><i></i>Supplies goods or services</span>
+            <span><i class="m"></i>Equity or financing</span>
+            <span><i class="p"></i>Partnership</span>
+            <span><span class="star">★</span> Covered by a Meridian62 desk</span>
+            <span class="keys">G growth · B blend · V value · C cyclical · P private | LT long-term contracted · BL backlog · RC recurring · OR short-cycle orders · SP spot · BU compute buyer</span>
+          </div>
+          <div class="m2m-zoom">
+            <button type="button" id="m2m-zout" aria-label="Zoom out">−</button>
+            <button type="button" id="m2m-zfit">Whole map</button>
+            <button type="button" id="m2m-zin" aria-label="Zoom in">+</button>
+          </div>
+        </div>
+        <div class="m2m-scroller" id="m2m-scroller"><svg id="m2m-svg" role="group" aria-label="Supply-chain map of the AI industry, ten layers from metals to AI labs"></svg></div>
+        <p class="m2m-hint">Upstream on the left, end demand on the right. Click a company to highlight its suppliers (incoming, in gold) and customers; click empty space to reset. Pick a desk lens above to bring one desk's companies into focus. Lines show typical flows between layers; a specific deal is only claimed where the company panel names it.</p>
+      </div>
+      <noscript><div class="callout"><b>JavaScript needed</b>The interactive map needs JavaScript. The other tabs summarise the same research in text.</div></noscript>
+    </section>
+
+    <section class="m2m-view" id="m2m-v-companies" hidden></section>
+
+    <section class="m2m-view" id="m2m-v-money" hidden>
+      <div class="m2m-prose">
+        <h2>Follow the money</h2>
+        <p>Every company on the map is ultimately paid from two pools: the cash flows of the four US hyperscalers (Microsoft, Alphabet, Amazon, Meta) plus Oracle, and the money that investors put into AI labs and neoclouds. AI labs' revenue is growing fast, but their compute commitments are many times larger. Anthropic reported H1 2026 revenue of $16.3bn, while its S-1 reportedly lists roughly $800bn of multi-year compute contracts.<sup class="s"><a href="#sources">21</a></sup> OpenAI's annualised revenue was reported above $25bn in April 2026, against a single Oracle contract of about $300bn.<sup class="s"><a href="#sources">22,23</a></sup></p>
+        <p>Those commitments become the contracted backlogs of the clouds: Oracle reported $664bn of remaining performance obligations at Q1 FY2027, roughly half reportedly tied to OpenAI, and CoreWeave $132.5bn.<sup class="s"><a href="#sources">18,19</a></sup> The clouds turn backlog into capex (Oracle guides $90–95bn for FY2027, CoreWeave $37–39bn for 2026, TSMC $60–64bn), and that capex becomes the orders of everyone upstream: Vertiv's organic orders more than doubled in Q3 2026, Siemens' data-centre backlog passed €7bn, and ASML holds €9.3bn of customer deposits.<sup class="s"><a href="#sources">2,3,4,17,18,19</a></sup></p>
+        <p>The key point for analysis: contracts get <strong>firmer</strong> the closer a company sits to the data centre (leases, take-or-pay compute, power purchase agreements) and <strong>softer</strong> upstream (purchase orders, spot metal prices). But a contract is only as good as the party paying it. Much of the downstream backlog is ultimately owed by loss-making AI labs, so "contracted" revenue at Oracle or CoreWeave carries credit risk that a gas contract with TSMC does not.</p>
+        <h3>Circular financing</h3>
+        <p>Several suppliers fund their own customers. Nvidia has invested in OpenAI, CoreWeave and Anthropic, each of which buys Nvidia GPUs; AMD gave OpenAI warrants over AMD shares in exchange for a 6 GW GPU commitment; Microsoft, Amazon and Alphabet invest in AI labs that then spend the money on their clouds. These loops can be rational (they secure demand and lower the lab's cost of capital), but they also mean revenue on one side partly depends on equity raised on the other. Follow the dashed pink lines on the map to see them.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Contract-coverage ladder</p>
+        <h3 style="margin-bottom:1.2rem">From most to least protected demand</h3>
+        <div class="m2m-ladder" id="m2m-ladder"></div>
+      </div>
+    </section>
+
+    <section class="m2m-view" id="m2m-v-geopolitics" hidden>
+      <div class="m2m-prose"><h2>Geopolitical fault lines</h2><p>The chain crosses some of the world's most contested borders. Each card names the pressure point, what is happening as of mid-November 2026, and which companies on the map are exposed.</p></div>
+      <div class="m2m-grid" id="m2m-flash"></div>
+    </section>
+
+    <section class="m2m-view" id="m2m-v-styles" hidden>
+      <div class="m2m-prose">
+        <h2>Growth vs value in this chain</h2>
+        <p>A growth stock is priced mainly on profits it is expected to earn years from now, so its P/E is high and small changes in the growth outlook move the share price a lot. A value stock is priced mainly on what it earns today, so less optimism is built in. Cyclicals are a third group: their profits swing with a commodity or capital-spending cycle, so investors value them on "mid-cycle" earnings and their P/E often looks lowest exactly when profits are about to fall.</p>
+        <p>In this chain the labels follow a pattern. The scarcest, hardest-to-copy positions (ASML's EUV monopoly, Nvidia's software ecosystem, Arm's royalties, Vertiv's data-centre focus) trade as growth stocks. Long-contracted, utility-like businesses (Linde, Air Liquide, data-centre REITs) trade as blend or value. Commodity producers and memory makers trade as cyclicals because their prices, not their volumes, decide profits. The neoclouds and Oracle are unusual: they have long contracts (normally a value trait) but are valued as growth stocks because their contracts are growing quickly and are funded with debt.</p>
+        <p>The labels on this map describe how the market typically treats each company's business, not a current valuation call.</p>
+      </div>
+      <div class="m2m-grid" id="m2m-stylegrid"></div>
+    </section>
+
+    <section class="m2m-view" id="m2m-v-sources" hidden>
+      <div class="m2m-prose"><h2>Sources</h2><p>Recent figures (2026) link to the sources below. Older deal terms from 2024–2025 (for example AMD–OpenAI, Broadcom–OpenAI, MP Materials–US Defense Department, Constellation's PPAs, Nebius–Microsoft) come from the companies' own announcements at the time. Where a figure comes from press reports of a filing rather than the filing itself, the text says "reportedly".</p></div>
+      <ol class="m2m-src" id="m2m-srclist"></ol>
+    </section>
+
+    <p class="m2m-foot">Built for Meridian62 research. This page explains how companies make money and where their risks sit; it is not a recommendation to buy or sell any security. <a href="{{ '/legal/' | relative_url }}" style="color:var(--gold)">Read the full disclaimer.</a></p>
+  </div>
+</section>
+
+<aside class="m2m-drawer" id="m2m-drawer" role="dialog" aria-modal="false" hidden></aside>
+
+<section class="section--tight">
+  <div class="wrap">
+    <div class="cta" data-reveal>
+      <p class="eyebrow eyebrow--center">Read it with the desks</p>
+      <h2>One supply chain. Six desks reading it.</h2>
+      <p>Energy, materials, chemicals, industrials, technology and financials each own a different stretch of this map. Their weekly notes follow the named companies on it as results, contracts and export rules change.</p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn" href="{{ '/sectors/' | relative_url }}">Read the sectors</a>
+        <a class="btn btn--ghost" href="{{ '/glossary/' | relative_url }}">Decoded · Glossary</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>window.M2M_DESKS = {{ m2m.desks | jsonify }};</script>
+<script src="{{ '/assets/js/m2m-data.js' | relative_url }}?v=1" defer></script>
+<script src="{{ '/assets/js/m2m.js' | relative_url }}?v=1" defer></script>

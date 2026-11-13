@@ -16,6 +16,9 @@
   <link rel="preload" href="{{ '/assets/fonts/bodoni-moda-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/inter-latin-500-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}?v=1">
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=1">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v=2">
+  {%- if page.extra_css %}
+  <link rel="stylesheet" href="{{ page.extra_css | relative_url }}?v=1">
+  {%- endif %}
   {% seo title=false %}
 </head>

@@ -1,0 +1,42 @@
+# =============================================================
+#  MINE-TO-MODEL MAP — desk lenses
+#  Each entry links one sector desk to the companies on the map that matter to it.
+#  - The desk's own equities are starred on the map automatically (matched by ticker),
+#    so you only need to edit this file when you want a different set of companies in focus.
+#  - "companies" uses the map's company ids (see assets/js/m2m-data.js, the  id: "..."  fields).
+#  - A desk listed here also gets a "Mine-to-Model" callout on its sector page.
+#  Keep the two-space indentation exactly as shown.
+# =============================================================
+
+as_of: "13 Nov 2026"
+
+desks:
+  - slug: energy-utilities
+    focus: "Power is the binding constraint"
+    blurb: "Electricity, not chips, now limits how fast data centres can be built. Follow how 20-year nuclear power purchase agreements (Constellation with Microsoft and Meta) and multi-year gas-turbine and transformer backlogs (GE Vernova, Siemens Energy, Hitachi) turn AI demand into contracted, utility-style cash flows, and where grid queues and permitting slow the developers down."
+    companies: [ceg, gev, enr, hitachi, prysmian, siemens, dev, dlr, eqix, msft, meta]
+
+  - slug: materials-mining-infrastructure
+    focus: "The left edge of the map"
+    blurb: "Copper (Freeport-McMoRan), silver (Fresnillo), platinum-group metals (Valterra) and rare earths (MP Materials, Lynas, China) are sold at market prices, so AI demand shows up in the price rather than in contracts. The infrastructure side (cable from Prysmian, data-centre developers and REITs) shows where those materials end up. The desk's own equities are not drawn on the map, but the same two questions apply to them: is demand contracted or priced at spot, and how much of the chain runs through Chinese processing?"
+    companies: [fcx, valterra, fres, heraeus, mp, lynas, china, prysmian, dev, dlr, eqix]
+
+  - slug: chemicals
+    focus: "Chemistry with 15–20-year contracts"
+    blurb: "Industrial gases are the most contracted part of chemicals: Linde, Air Liquide and Air Products build on-site plants at chip fabs and are paid on take-or-pay terms, with energy costs passed through. Silicon wafers and photoresists (Shin-Etsu, SUMCO) follow the chip cycle instead. Compare both with the desk's commodity chemicals, whose demand is short-cycle and priced off the market."
+    companies: [linde, airliquide, apd, shinetsu, sumco, china, lynas, tsmc, samsung, skhynix]
+
+  - slug: industrials-capital-goods-transport
+    focus: "Backlogs in power and cooling"
+    blurb: "Layers 07 and 08 are capital goods: switchgear, transformers, turbines, backup power and chillers, sold from order backlogs. Siemens (a desk equity) reports a data-centre backlog above €7bn, and Air Products (also a desk equity) sits upstream on take-or-pay gas contracts. The useful question is the quality of each backlog: how firm the orders are, and who ultimately pays for the data centre they go into."
+    companies: [siemens, apd, schneider, abb, eaton, prysmian, gev, enr, hitachi, vrt, rittal, trane, jci, delta, linde, dev]
+
+  - slug: technology-semiconductors
+    focus: "From the fab to the neocloud"
+    blurb: "TSMC and CoreWeave (both desk equities) sit on either side of Nvidia: TSMC makes the chips on reserved capacity with no take-or-pay terms, while CoreWeave rents them out on multi-year contracts funded with debt. Seagate, Credo and Cerebras are not drawn, but they fit into storage and connectivity (layer 06) and chip design (layer 05)."
+    companies: [tsmc, crwv, asml, amat, lam, tel, kla, snps, cdns, arm, samsung, skhynix, micron, intel, ase, smic, nvda, amd, avgo, mrvl, huawei, foxconn, dell, smci, anet, glw, orcl, nbis]
+
+  - slug: financials-banks
+    focus: "Who owes the backlog"
+    blurb: "The build-out is increasingly funded with debt. Oracle carries about $125bn of debt with negative free cash flow, CoreWeave about $47bn, data-centre developers rely on private credit, and Meta financed its Hyperion campus through a roughly $27bn joint venture with Blue Owl. Use the map to trace who ultimately owes each backlog, and why 'contracted' revenue owed by loss-making AI labs is a credit question for lenders and bond investors."
+    companies: [orcl, crwv, nbis, dev, dlr, eqix, meta, msft, softbank, openai, anthropic, nvda, amd]
