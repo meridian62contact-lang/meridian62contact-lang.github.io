@@ -14,6 +14,10 @@
 }
 .m2m [hidden],[hidden].m2m-drawer{display:none!important}
 .m2m-wide{width:min(1500px,100% - 2*var(--gutter));margin-inline:auto;position:relative;z-index:1}
+/* on wide screens the company panel sits beside the map instead of covering it */
+@media (min-width:1000px){
+  .m2m.m2m--panel .m2m-wide{width:auto;margin-left:var(--gutter);margin-right:calc(460px + 24px)}
+}
 .m2m-asof{display:inline-flex;gap:.6rem;font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:1.4rem}
 .m2m-asof b{color:var(--gold);font-weight:500}
 
@@ -55,7 +59,7 @@
 .m2m-legend i.p{border-top:2px dotted var(--m2m-partner)}
 .m2m-legend .star{color:var(--gold)}
 .m2m-legend .keys{font-family:var(--mono);font-size:.7rem;letter-spacing:.02em}
-.m2m-scroller{overflow:auto;max-height:78vh;overscroll-behavior:contain}
+.m2m-scroller{overflow:auto;max-height:78vh}
 #m2m-svg{display:block}
 #m2m-svg text{fill:var(--ink)}
 #m2m-svg .colhead{font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;fill:var(--ink-2)}

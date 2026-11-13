@@ -120,6 +120,10 @@ body.nav-open .nav-toggle span::after{top:0;transform:rotate(-45deg)}
     opacity:0;pointer-events:none;transition:opacity .4s var(--ease);z-index:40}
   .nav a{font-family:var(--display);font-size:2rem;letter-spacing:.12em;text-transform:none}
   body.nav-open .nav{opacity:1;pointer-events:auto}
+  /* menu scrolls when it is taller than the screen; items stay centred when they fit */
+  .nav{justify-content:flex-start;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:96px 24px 56px}
+  .nav > a:first-child{margin-top:auto}
+  .nav > a:last-child{margin-bottom:auto}
   body.nav-open{position:fixed;left:0;right:0;width:100%;overflow:hidden}
 }
 
@@ -504,3 +508,4 @@ body.nav-open .subscribe-popup{display:none}
 .m2m-callout p{margin:0}
 .m2m-callout .btn{white-space:nowrap}
 @media (max-width:760px){.m2m-callout{grid-template-columns:1fr}}
+@media (max-width:900px) and (max-height:820px){.nav{gap:1.6rem}.nav a{font-size:1.75rem}}

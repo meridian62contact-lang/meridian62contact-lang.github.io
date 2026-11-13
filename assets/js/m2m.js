@@ -219,13 +219,30 @@
       '</div>';
     if (drawer.hidden) lastFocus = document.activeElement;
     drawer.hidden = false;
+    keepMapInPlace(function () { root.classList.add('m2m--panel'); });
+    if (currentView() === 'map') requestAnimationFrame(function () { reveal(id); });
     drawer.setAttribute('aria-labelledby', 'm2m-dtitle');
     drawer.scrollTop = 0;
     drawer.querySelector('[data-close]').focus({ preventScroll: true });
   }
+  // opening/closing the panel narrows/widens the page, so filters re-wrap; keep the map where the reader left it
+  function keepMapInPlace(change) {
+    var box = $('.m2m-mapbox'), visible = currentView() === 'map' && box && box.offsetParent;
+    var before = visible ? box.getBoundingClientRect().top : 0;
+    change();
+    if (visible) window.scrollBy(0, box.getBoundingClientRect().top - before);
+  }
+  // scroll the map box so the selected company sits in the middle of what is visible
+  function reveal(id) {
+    var sc = $('#m2m-scroller'), p = pos[id]; if (!sc || !p) return;
+    var x = (p.x + nodeW / 2) * zoom - sc.clientWidth / 2;
+    var y = (p.y + nodeH / 2) * zoom - sc.clientHeight / 2;
+    sc.scrollTo({ left: Math.max(0, x), top: Math.max(0, y), behavior: 'smooth' });
+  }
   function closeDrawer() {
     if (drawer.hidden) return;
     drawer.hidden = true;
+    keepMapInPlace(function () { root.classList.remove('m2m--panel'); });
     if (lastFocus && lastFocus.focus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
   }
   drawer.addEventListener('click', function (ev) {
