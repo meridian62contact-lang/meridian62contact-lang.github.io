@@ -196,6 +196,7 @@
     var c = byId[id], r = rel(id), cov = coveredBy[id] || [];
     var lenses = LENSES.filter(function (l) { return l.ids.indexOf(id) > -1; });
     drawer.innerHTML =
+      '<button class="m2m-handle" type="button" data-expand aria-expanded="false">Tap to expand</button>' +
       '<button class="m2m-close" type="button" data-close>Close ✕</button>' +
       '<span class="m2m-kicker" style="color:' + layerColor(c.L) + '">' + pad(c.L) + ' · ' + esc(LAYERS[c.L - 1].name) + '</span>' +
       '<h2 id="m2m-dtitle">' + esc(c.name) + '</h2>' +
@@ -218,6 +219,7 @@
       (lenses.length ? '<div><div class="m2m-k">Relevant to these desks</div><div class="m2m-links">' + lenses.map(function (l) { return '<button type="button" data-lens="' + l.slug + '">' + esc(l.number) + ' ' + esc(l.name) + '</button>'; }).join('') + '</div></div>' : '') +
       '</div>';
     if (drawer.hidden) lastFocus = document.activeElement;
+    drawer.classList.remove('is-full');
     drawer.hidden = false;
     keepMapInPlace(function () { root.classList.add('m2m--panel'); });
     if (currentView() === 'map') requestAnimationFrame(function () { reveal(id); });
@@ -232,12 +234,23 @@
     change();
     if (visible) window.scrollBy(0, box.getBoundingClientRect().top - before);
   }
-  // scroll the map box so the selected company sits in the middle of what is visible
+  // bring the selected company into the part of the screen the reader can actually see:
+  // between the site header and the bottom of the window (or the top of the sheet on phones)
+  var phone = window.matchMedia('(max-width:640px)');
   function reveal(id) {
     var sc = $('#m2m-scroller'), p = pos[id]; if (!sc || !p) return;
-    var x = (p.x + nodeW / 2) * zoom - sc.clientWidth / 2;
-    var y = (p.y + nodeH / 2) * zoom - sc.clientHeight / 2;
-    sc.scrollTo({ left: Math.max(0, x), top: Math.max(0, y), behavior: 'smooth' });
+    var cx = (p.x + nodeW / 2) * zoom, cy = (p.y + nodeH / 2) * zoom;
+    var left = Math.max(0, cx - sc.clientWidth / 2);
+    var topIn = sc.scrollHeight > sc.clientHeight ? Math.max(0, cy - sc.clientHeight / 2) : 0;
+    sc.scrollTo({ left: left, top: topIn, behavior: 'smooth' });
+    var header = document.querySelector('.site-header');
+    var visTop = header ? header.getBoundingClientRect().bottom : 0;
+    var visBottom = phone.matches ? drawer.getBoundingClientRect().top : window.innerHeight;
+    var nodeY = sc.getBoundingClientRect().top + cy - topIn;
+    var margin = nodeH * zoom;
+    if (phone.matches || nodeY < visTop + margin || nodeY > visBottom - margin) {
+      window.scrollBy({ top: nodeY - (visTop + visBottom) / 2, behavior: 'smooth' });
+    }
   }
   function closeDrawer() {
     if (drawer.hidden) return;
@@ -247,7 +260,12 @@
   }
   drawer.addEventListener('click', function (ev) {
     var t = ev.target.closest('button'); if (!t) { if (ev.target.closest('[data-src]')) { ev.preventDefault(); go('sources'); } return; }
-    if (t.hasAttribute('data-close')) { select(null); closeDrawer(); }
+    if (t.hasAttribute('data-expand')) {
+      var full = drawer.classList.toggle('is-full');
+      t.setAttribute('aria-expanded', full ? 'true' : 'false');
+      t.textContent = full ? 'Tap to shrink' : 'Tap to expand';
+    }
+    else if (t.hasAttribute('data-close')) { select(null); closeDrawer(); }
     else if (t.dataset.go) { if (currentView() === 'map') select(t.dataset.go); else openDrawer(t.dataset.go); }
     else if (t.dataset.lens) { select(null); closeDrawer(); setFilter('desk', t.dataset.lens); go('map'); }
   });
