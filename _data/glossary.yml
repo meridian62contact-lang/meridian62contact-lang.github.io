@@ -1096,3 +1096,140 @@
 - term: "Exit poll"
   definition: "A survey of voters taken as they leave polling stations, used to estimate why people voted as they did."
   sector: "aerospace-defence"
+# ---------- Added from the 16 November 2026 release ----------
+
+- term: "Adjusted operating earnings per share"
+  definition: "The company's measure of operating profit, excluding certain items, divided by the number of shares used in its calculation."
+  sector: "energy-utilities"
+
+- term: "Uprate"
+  definition: "An increase in an existing power plant's generating capacity through changes to equipment or operating conditions."
+  sector: "energy-utilities"
+
+- term: "Conditional loan commitment"
+  definition: "An agreement to provide financing once specified requirements have been met."
+  sector: "energy-utilities"
+
+- term: "Megawatt (MW)"
+  definition: "A unit of power; 1,000 MW can supply roughly a large city's demand."
+  sector: "energy-utilities"
+
+- term: "P/E ratio"
+  definition: "Share price divided by earnings per share; it shows how many years of current profit a buyer pays for one share."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Multiple"
+  definition: "Another word for a valuation ratio such as P/E; a \"higher multiple\" means investors pay more for each euro of profit."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Purchase price allocation (PPA)"
+  definition: "An accounting charge that spreads the cost of buying other companies over several years; Siemens guides on earnings before this charge."
+  sector: "industrials-capital-goods-transport"
+
+- term: "CPU"
+  definition: "Central processing unit; a general-purpose chip with a small number of powerful cores that handles varied tasks one after another."
+  sector: "industrials-capital-goods-transport"
+
+- term: "GPU"
+  definition: "Graphics processing unit; a chip with thousands of simpler cores that perform the same calculation in parallel, which suits AI."
+  sector: "industrials-capital-goods-transport"
+
+- term: "kW / MW"
+  definition: "Kilowatt and megawatt, units of power; 1 MW is 1,000 kW."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Switchgear"
+  definition: "Equipment that switches, protects and isolates electrical circuits so a fault in one part does not take down the rest."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Transformer"
+  definition: "Equipment that changes the voltage of electricity so it can be carried efficiently and then used safely."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Medium voltage"
+  definition: "The voltage level, roughly 1 kV to 36 kV here, at which power typically enters a data-centre site before being stepped down."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Spin-off"
+  definition: "When a company hands shares in one of its businesses directly to its own shareholders, creating a separately listed company."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Permitting"
+  definition: "The official approvals needed before a site can be built or connected to the grid."
+  sector: "industrials-capital-goods-transport"
+
+- term: "Spinal muscular atrophy (SMA)"
+  definition: "An inherited genetic disorder that causes progressive muscle weakness and wasting due to the loss of motor neurons."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "SMN1 gene"
+  definition: "A gene responsible for producing a protein essential for motor neuron survival and function."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Motor neurons"
+  definition: "Nerve cells that control voluntary muscle movements, including breathing and swallowing."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Gene therapy"
+  definition: "A treatment that introduces genetic material into cells to treat or prevent a disease."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "AAV9 vector"
+  definition: "A modified adeno-associated virus used to deliver genetic material into cells."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "GLI1"
+  definition: "A gene involved in regulating cell growth and development, which can contribute to cancer when abnormally activated."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Insertional mutagenesis"
+  definition: "The process by which inserted genetic material disrupts normal gene regulation and potentially triggers cancer development."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Genome"
+  definition: "The complete set of genetic material (DNA) within an organism's cells."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Intravenous infusion"
+  definition: "Administration of a treatment directly into a vein."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Intrathecal injection"
+  definition: "Administration of a treatment into the fluid surrounding the spinal cord and brain."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Neoplasia"
+  definition: "The abnormal growth of cells that can result in the formation of tumours, which may be benign or malignant."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Malignancy"
+  definition: "A cancerous growth that can invade surrounding tissues and spread to other parts of the body."
+  sector: "pharmaceuticals-biotech-life-sciences"
+
+- term: "Bank of Japan"
+  definition: "Japan's central bank."
+  sector: "macro-rates-fx"
+
+- term: "Intervention"
+  definition: "When a government or central bank trades in the currency market to push its currency's value up or down."
+  sector: "macro-rates-fx"
+
+- term: "Joint intervention"
+  definition: "When two governments carry out an intervention together."
+  sector: "macro-rates-fx"
+
+- term: "Policy rate / target range"
+  definition: "The interest rate a central bank aims for, which influences borrowing costs across the economy (the Fed sets a range rather than a single figure)."
+  sector: "macro-rates-fx"
+
+- term: "Carry trading"
+  definition: "Borrowing in a currency with low interest rates to invest in one with higher rates, and keeping the difference."
+  sector: "macro-rates-fx"
+
+- term: "Money-market instruments"
+  definition: "Very short-term loans, such as government bills, that pay a small amount of interest."
+  sector: "macro-rates-fx"
+
+- term: "Quarter-point"
+  definition: "A rise of 0.25 percentage points in interest rates."
+  sector: "macro-rates-fx"
