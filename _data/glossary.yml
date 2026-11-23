@@ -1233,3 +1233,85 @@
 - term: "Quarter-point"
   definition: "A rise of 0.25 percentage points in interest rates."
   sector: "macro-rates-fx"
+
+# ---------- Added from the 23 November 2026 release ----------
+
+- term: "Iron ore fines"
+  definition: "Iron ore in small particles, which must be sintered before it can go into a blast furnace."
+  sector: "materials-mining-infrastructure"
+
+- term: "Sintering"
+  definition: "Heating fines until the particles partly melt and fuse into larger pieces a blast furnace can use. It is the most polluting step in steelmaking."
+  sector: "materials-mining-infrastructure"
+
+- term: "Pellets"
+  definition: "Small, hard balls of finely ground iron ore, fired at the pellet plant so they can go straight into a blast furnace."
+  sector: "materials-mining-infrastructure"
+
+- term: "Briquettes"
+  definition: "Iron ore pressed into small blocks with a binder instead of being fired. Like pellets, they can skip the sinter plant."
+  sector: "materials-mining-infrastructure"
+
+- term: "Lump ore"
+  definition: "Naturally coarse iron ore that can go into a blast furnace without sintering."
+  sector: "materials-mining-infrastructure"
+
+- term: "Blast furnace"
+  definition: "The furnace where iron ore is turned into molten iron using coke."
+  sector: "materials-mining-infrastructure"
+
+- term: "Premium"
+  definition: "The extra amount buyers pay above the benchmark iron ore price for a better product."
+  sector: "materials-mining-infrastructure"
+
+- term: "Realised price"
+  definition: "The average price a company actually receives for what it sells."
+  sector: "materials-mining-infrastructure"
+
+- term: "Heavy-pollution alert"
+  definition: "A local government warning that triggers temporary limits on polluting industry. Red is the most severe level."
+  sector: "materials-mining-infrastructure"
+
+- term: "Return on Tangible Equity (RoTE)"
+  definition: "A measure of a bank's profitability, calculated as profit attributable to ordinary shareholders divided by average tangible shareholders' equity (excluding intangible assets such as goodwill)."
+  sector: "financials-banks"
+
+- term: "Equities trading revenue"
+  definition: "Income generated from facilitating trades in shares, equity derivatives and related financing services for clients."
+  sector: "financials-banks"
+
+- term: "Fixed Income, Currencies and Commodities (FICC)"
+  definition: "The investment banking division responsible for trading products such as bonds, foreign currencies, interest-rate derivatives and commodities."
+  sector: "financials-banks"
+
+- term: "Equity derivatives"
+  definition: "Financial contracts whose value depends on underlying shares or stock indices. Investors use them to hedge risks or gain exposure to market movements without directly owning the shares."
+  sector: "financials-banks"
+
+- term: "Prime financing"
+  definition: "Financing services provided by investment banks to institutional investors, particularly hedge funds, allowing them to borrow funds or securities to support their trading activities."
+  sector: "financials-banks"
+
+- term: "Credit intermediation"
+  definition: "The process through which banks facilitate transactions between buyers and sellers of debt securities, such as corporate bonds, often by temporarily holding securities and earning trading spreads."
+  sector: "financials-banks"
+
+- term: "Cyclical revenue"
+  definition: "Revenue that fluctuates depending on economic conditions, market activity and investor demand, rather than remaining relatively stable over time."
+  sector: "financials-banks"
+
+- term: "Earnings resilience"
+  definition: "A company's ability to maintain profitability despite challenging economic conditions or fluctuations in market activity."
+  sector: "financials-banks"
+
+- term: "Cost of equity"
+  definition: "The return shareholders require for investing in a company's shares, reflecting the risk of holding that investment."
+  sector: "financials-banks"
+
+- term: "Valuation rerating"
+  definition: "An increase or decrease in the valuation multiple investors are willing to pay for a company's earnings or book value, often reflecting changes in expectations about profitability, growth or risk."
+  sector: "financials-banks"
+
+- term: "Structural revenue growth"
+  definition: "Growth resulting from longer-term business developments, such as investment in new capabilities or expansion of client relationships, rather than temporary favourable market conditions."
+  sector: "financials-banks"
